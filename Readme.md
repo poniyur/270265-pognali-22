@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
 * Студент: [Николай Полторак](https://up.htmlacademy.ru/adaptive/22/user/270265).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Шугаев](https://htmlacademy.ru/profile/humizi).
 
 ---
 
