@@ -13,22 +13,22 @@
 
         <nav class="header__nav nav">
           <button class="header__menu-toggler toggler" type="button">Открыть/Закрыть меню</button>
-          <ul class="header__menu-list menu-list">
-            <li class="menu-item"><a href="#">О сервисе</a></li>
-            <li class="menu-item"><a href="#">Направления</a></li>
-            <li class="menu-item"><a href="#">Попутчики</a></li>
+          <ul class="header__menu-list menu">
+            <li class="menu__item"><a href="#">О сервисе</a></li>
+            <li class="menu__item"><a href="#">Направления</a></li>
+            <li class="menu__item"><a href="#">Попутчики</a></li>
           </ul>
 
           <ul class="header__user-actions user-actions">
-            <li class="header__login user-actions__login"><a class="button" href="#">Авторизация</a></li>
-            <li class="header__phone user-actions__phone"><a class="icon icon--phone" href="tel:88005558628">8 800 555-86-28</a></li>
-            <li class="header__mail user-actions__mail"><a class="icon icon--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+            <li class="user-actions__login"><a class="button" href="#">Авторизация</a></li>
+            <li class="user-actions__phone"><a class="icon icon--phone" href="tel:88005558628">8 800 555-86-28</a></li>
+            <li class="user-actions__email"><a class="icon icon--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
           </ul>
 
-          <ul class="header__social social">
-            <li class="header__social-item social__item"><a href="#">Facebook</a></li>
-            <li class="header__social-item social__item"><a href="#">VK</a></li>
-            <li class="header__social-item social__item"><a href="#">Instagram</a></li>
+          <ul class="header__socials socials">
+            <li class="socials__item"><a href="#">Facebook</a></li>
+            <li class="socials__item"><a href="#">VK</a></li>
+            <li class="socials__item"><a href="#">Instagram</a></li>
           </ul>
         </nav>
 
@@ -43,21 +43,21 @@
           <h1 class="lead__title title title--main">В путешествие<br>с крутыми<br>попутчиками!</h1>
 
           <ul class="lead__user-actions user-actions">
-            <li class="lead__login user-actions__login"><a class="button" href="#">Авторизация</a></li>
-            <li class="lead__phone user-actions__phone"><a class="icon icon--phone" href="tel:88005558628">8 800 555-86-28</a></li>
-            <li class="lead__mail user-actions__mail"><a class="icon icon--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+            <li class=user-actions__login"><a class="button" href="#">Авторизация</a></li>
+            <li class="user-actions__phone"><a class="icon icon--phone" href="tel:88005558628">8 800 555-86-28</a></li>
+            <li class="user-actions__email"><a class="icon icon--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
           </ul>
 
-          <blockquote class="lead__quote quote">
-            <p class="lead__quote-text quote__text text">«Лучшее приложение,<br>что я видел в жизни!»</p>
-            <cite class="lead__quote-author quote__author text-highlight">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+          <blockquote class="lead__quote">
+            <p class="lead__quote-text text">«Лучшее приложение,<br>что я видел в жизни!»</p>
+            <cite class="lead__quote-author text-highlight">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
           </blockquote>
 
           <ol class="lead__steps steps">
-            <li class="lead__step steps__item">Выберите<br>направление</li>
-            <li class="lead__step steps__item">Изучите идеи<br>путешественников</li>
-            <li class="lead__step steps__item">Находите тех,<br>кто похож на вас</li>
-            <li class="lead__step steps__item">Путешествуйте<br>вместе!</li>
+            <li class="steps__item">Выберите<br>направление</li>
+            <li class="steps__item">Изучите идеи<br>путешественников</li>
+            <li class="steps__item">Находите тех,<br>кто похож на вас</li>
+            <li class="steps__item">Путешествуйте<br>вместе!</li>
           </ol>
 
         </div>
@@ -154,12 +154,12 @@
 
                 <h3 class="visually-hidden">Тэги</h3>
                 <ul class="companion-card__tags tags">
-                  <li>ЗОЖ</li>
-                  <li>ПП</li>
-                  <li>Фитнес</li>
-                  <li>пляж</li>
-                  <li>авокадо</li>
-                  <li>смузи</li>
+                  <li class="tags-item">ЗОЖ</li>
+                  <li class="tags-item">ПП</li>
+                  <li class="tags-item">Фитнес</li>
+                  <li class="tags-item">пляж</li>
+                  <li class="tags-item">авокадо</li>
+                  <li class="tags-item">смузи</li>
                 </ul>
 
                 <h3 class="visually-hidden">Способы передвижения</h3>
@@ -245,7 +245,7 @@
 
           <p class="feedback__text-question text">Остались вопросы?<br>Мы с радостью на них ответим!</p>
           <p class="feedback__phone user-actions__phone"><a class="icon icon--phone" href="tel:88005558628">8 800 555-86-28</a></p>
-          <p class="feedback__mail user-actions__mail"><a class="icon icon--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          <p class="feedback__email user-actions__email"><a class="icon icon--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
 
         </div>
       </section>
@@ -278,18 +278,18 @@
       </div>
     </footer>
 
-    <section class="tariffs modal">
-      <div class="tarrifs__wrapper">
+    <section class="tariffs-modal modal">
+      <div class="tariffs-modal__wrapper">
 
-        <h2 class="tariffs__title title">Бизнес-тарифы</h2>
-        <ul class="tariffs__list">
-          <li class="tariffs__item">Реклама у блоггера<br>300 000 руб./пост</li>
-          <li class="tariffs__item">Накрутка подписчиков<br>от 1 руб./шт.</li>
-          <li class="tariffs__item">Лайки от ботов<br>от 20 коп./лайк</li>
-          <li class="tariffs__item">Ваш продакт-плейсмент<br>Индивидуально</li>
+        <h2 class="tariffs-modal__title title">Бизнес-тарифы</h2>
+        <ul class="tariffs-modal__list">
+          <li class="tariffs-modal__item">Реклама у блоггера<br>300 000 руб./пост</li>
+          <li class="tariffs-modal__item">Накрутка подписчиков<br>от 1 руб./шт.</li>
+          <li class="tariffs-modal__item">Лайки от ботов<br>от 20 коп./лайк</li>
+          <li class="tariffs-modal__item">Ваш продакт-плейсмент<br>Индивидуально</li>
         </ul>
 
-        <button class="tariffs__close-button modal__close" type="button">Закрыть окно</button>
+        <button class="tariffs-modal__close-button modal__close" type="button">Закрыть окно</button>
 
       </div>
     </section>
