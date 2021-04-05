@@ -21,7 +21,7 @@
 
           <ul class="header__user-actions user-actions">
             <li class="user-actions__login"><a class="button" href="#">Авторизация</a></li>
-            <li class="user-actions__phone"><a class="icon icon--phone" href="tel:88005558628">8 800 555-86-28</a></li>
+            <li class="user-actions__phone"><a class="icon icon--phone" href="tel:88005558628">8 800 555-86-28</a></li>
             <li class="user-actions__email"><a class="icon icon--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
           </ul>
 
@@ -37,12 +37,13 @@
 
     <main>
 
+      <h1 class="page-title title">Направления</h1>
+
       <section class="user-profile">
         <div class="container">
 
-          <header class="user-profile__header first-header">
-            <h1 class="iser-profile__title title title--main">Направления</h1>
-          </header>
+          <h2 class="visual-hidden">Профиль</h2>
+
 
           <div class="user-profile__box">
 
@@ -66,12 +67,12 @@
             </div>
 
             <div class="user-profile__transport cluster">
-              <p class="cliser__title">Транспорт</p>
-              <ul class="user-profile__transport-list transport-list">
-                <li class="transport-item transport-item--active">Самолётом</li>
-                <li class="transport-item transport-item--active">Наземным транспортом</li>
-                <li class="transport-item">На велосипеде</li>
-                <li class="transport-item transport-item--active">Пешком</li>
+              <p class="cluster__title">Транспорт</p>
+              <ul class="user-profile__transport-list">
+                <li class="transport-icon transport-icon--fly transport-icon--select">Самолётом</li>
+                <li class="transport-icon transport-icon--car">Наземным транспортом</li>
+                <li class="transport-icon transport-icon--byc transport-icon--select">На велосипеде</li>
+                <li class="transport-icon transport-icon--leg transport-icon--select">Пешком</li>
               </ul>
             </div>
 
@@ -258,56 +259,56 @@
                     <div class="country-picker__choosed-country">
                       Выберите страну
                       <button class="country-picker__toggler">Скрыть/Раскрыть список стран</button>
-                      <div class="country-picker__dropdown">
-                        <table class="country-picker__dropdown-nav">
-                          <tr class="country-picker__dropdown-row">
-                            <td class="country-picker__dropdown-cell country-picker__dropdown-cell--selected">а</td>
-                            <td class="country-picker__dropdown-cell">б</td>
-                            <td class="country-picker__dropdown-cell">в</td>
-                            <td class="country-picker__dropdown-cell">г</td>
-                            <td class="country-picker__dropdown-cell">д</td>
+                      <div class="country-picker__dropdown country-filter">
+                        <table class="country-filter__nav">
+                          <tr class="country-filter__row">
+                            <td class="country-filter__cell country-filter__cell--selected">а</td>
+                            <td class="country-filter__cell">б</td>
+                            <td class="country-filter__cell">в</td>
+                            <td class="country-filter__cell">г</td>
+                            <td class="country-filter__cell">д</td>
                           </tr>
-                          <tr class="country-picker__dropdown-row">
-                            <td class="country-picker__dropdown-cell">е</td>
-                            <td class="country-picker__dropdown-cell">з</td>
-                            <td class="country-picker__dropdown-cell">и</td>
-                            <td class="country-picker__dropdown-cell">к</td>
-                            <td class="country-picker__dropdown-cell">л</td>
+                          <tr class="country-filter__row">
+                            <td class="country-filter__cell">е</td>
+                            <td class="country-filter__cell">з</td>
+                            <td class="country-filter__cell">и</td>
+                            <td class="country-filter__cell">к</td>
+                            <td class="country-filter__cell">л</td>
                           </tr>
-                          <tr class="country-picker__dropdown-row">
-                            <td class="country-picker__dropdown-cell">м</td>
-                            <td class="country-picker__dropdown-cell">н</td>
-                            <td class="country-picker__dropdown-cell">о</td>
-                            <td class="country-picker__dropdown-cell">п</td>
-                            <td class="country-picker__dropdown-cell">р</td>
+                          <tr class="country-filter__row">
+                            <td class="country-filter__cell">м</td>
+                            <td class="country-filter__cell">н</td>
+                            <td class="country-filter__cell">о</td>
+                            <td class="country-filter__cell">п</td>
+                            <td class="country-filter__cell">р</td>
                           </tr>
-                          <tr class="country-picker__dropdown-row">
-                            <td class="country-picker__dropdown-cell">с</td>
-                            <td class="country-picker__dropdown-cell">т</td>
-                            <td class="country-picker__dropdown-cell">у</td>
-                            <td class="country-picker__dropdown-cell">ф</td>
-                            <td class="country-picker__dropdown-cell">х</td>
+                          <tr class="country-filter__row">
+                            <td class="country-filter__cell">с</td>
+                            <td class="country-filter__cell">т</td>
+                            <td class="country-filter__cell">у</td>
+                            <td class="country-filter__cell">ф</td>
+                            <td class="country-filter__cell">х</td>
                           </tr>
-                          <tr class="country-picker__dropdown-row">
-                            <td class="country-picker__dropdown-cell">ч</td>
-                            <td class="country-picker__dropdown-cell">ш</td>
-                            <td class="country-picker__dropdown-cell">э</td>
-                            <td class="country-picker__dropdown-cell">ю</td>
-                            <td class="country-picker__dropdown-cell">я</td>
+                          <tr class="country-filter__row">
+                            <td class="country-filter__cell">ч</td>
+                            <td class="country-filter__cell">ш</td>
+                            <td class="country-filter__cell">э</td>
+                            <td class="country-filter__cell">ю</td>
+                            <td class="country-filter__cell">я</td>
                           </tr>
                         </table>
-                        <ul class="country-picker__choose-list">
-                          <li class="country-picker__choose-item">Австралия</li>
-                          <li class="country-picker__choose-item">Австрия</li>
-                          <li class="country-picker__choose-item">Азербайджан</li>
-                          <li class="country-picker__choose-item">Албания</li>
-                          <li class="country-picker__choose-item">Алжир</li>
-                          <li class="country-picker__choose-item">Ангола</li>
-                          <li class="country-picker__choose-item">Андорра</li>
-                          <li class="country-picker__choose-item">Антигуа и Барбуда</li>
-                          <li class="country-picker__choose-item">Аргентина</li>
-                          <li class="country-picker__choose-item">Армения</li>
-                          <li class="country-picker__choose-item">Афганистан</li>
+                        <ul class="country-filter__list">
+                          <li class="country-filter__item">Австралия</li>
+                          <li class="country-filter__item">Австрия</li>
+                          <li class="country-filter__item">Азербайджан</li>
+                          <li class="country-filter__item">Албания</li>
+                          <li class="country-filter__item">Алжир</li>
+                          <li class="country-filter__item">Ангола</li>
+                          <li class="country-filter__item">Андорра</li>
+                          <li class="country-filter__item">Антигуа и Барбуда</li>
+                          <li class="country-filter__item">Аргентина</li>
+                          <li class="country-filter__item">Армения</li>
+                          <li class="country-filter__item">Афганистан</li>
                         </ul>
                       </div>
                     </div>

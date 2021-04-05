@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="html" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Погнали</title>
+  </head>
+  <body class="body index">
+
+    <header class="header contrast-theme">
+      <div class="container">
+
+        <a class="header__logo logo" href="#"><img src="./img/logo_mobile.png" alt="Логотип 'Погнали?'"></a>
+
+        <nav class="header__nav nav">
+          <button class="header__menu-toggler toggler" type="button">Открыть/Закрыть меню</button>
+          <ul class="header__menu-list menu">
+            <li class="menu__item"><a href="#">О сервисе</a></li>
+            <li class="menu__item"><a href="#">Направления</a></li>
+            <li class="menu__item"><a href="#">Попутчики</a></li>
+          </ul>
+
+          <ul class="header__user-actions user-actions">
+            <li class="user-actions__login"><a class="button" href="#">Авторизация</a></li>
+            <li class="user-actions__phone"><a class="icon icon--phone" href="tel:88005558628">8 800 555-86-28</a></li>
+            <li class="user-actions__email"><a class="icon icon--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+          </ul>
+
+          <ul class="header__socials socials">
+            <li class="socials__item"><a href="#">Facebook</a></li>
+            <li class="socials__item"><a href="#">VK</a></li>
+            <li class="socials__item"><a href="#">Instagram</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main>
+
+      <h1 class="page-title title">Попутчики</h1>
+
+      <section class="search">
+        <div class="container">
+
+          <div class="search__filter filter">
+
+            <h2 class="search__title">Фильтрация по странам:</h2>
+            <button class="filter__toggler" type="button">Открыть/закрыть</button>
+            <ul class="filter__category-list">
+              <li class="filter__caregory-item"><button class="filter__change-category filter__change-category--current">Европа</button></li>
+              <li class="filter__caregory-item"><button class="filter__change-category">Азия</button></li>
+              <li class="filter__caregory-item"><button class="filter__change-category">Америка</button></li>
+              <li class="filter__caregory-item"><button class="filter__change-category">Острова</button></li>
+            </ul>
+
+            <div class="search__country-filter country-filter">
+              <table class="country-filter__nav">
+                <tr class="country-filter__row">
+                  <td class="country-filter__cell country-filter__cell--selected">а</td>
+                  <td class="country-filter__cell">б</td>
+                  <td class="country-filter__cell">в</td>
+                  <td class="country-filter__cell">г</td>
+                  <td class="country-filter__cell">д</td>
+                </tr>
+                <tr class="country-filter__row">
+                  <td class="country-filter__cell">е</td>
+                  <td class="country-filter__cell">з</td>
+                  <td class="country-filter__cell">и</td>
+                  <td class="country-filter__cell">к</td>
+                  <td class="country-filter__cell">л</td>
+                </tr>
+                <tr class="country-filter__row">
+                  <td class="country-filter__cell">м</td>
+                  <td class="country-filter__cell">н</td>
+                  <td class="country-filter__cell">о</td>
+                  <td class="country-filter__cell">п</td>
+                  <td class="country-filter__cell">р</td>
+                </tr>
+                <tr class="country-filter__row">
+                  <td class="country-filter__cell">с</td>
+                  <td class="country-filter__cell">т</td>
+                  <td class="country-filter__cell">у</td>
+                  <td class="country-filter__cell">ф</td>
+                  <td class="country-filter__cell">х</td>
+                </tr>
+                <tr class="country-filter__row">
+                  <td class="country-filter__cell">ч</td>
+                  <td class="country-filter__cell">ш</td>
+                  <td class="country-filter__cell">э</td>
+                  <td class="country-filter__cell">ю</td>
+                  <td class="country-filter__cell">я</td>
+                </tr>
+              </table>
+              <ul class="country-filter__list">
+                <li class="country-filter__item">Австралия</li>
+                <li class="country-filter__item">Австрия</li>
+                <li class="country-filter__item">Азербайджан</li>
+                <li class="country-filter__item">Албания</li>
+                <li class="country-filter__item">Алжир</li>
+                <li class="country-filter__item">Ангола</li>
+                <li class="country-filter__item">Андорра</li>
+                <li class="country-filter__item">Антигуа и Барбуда</li>
+                <li class="country-filter__item">Аргентина</li>
+                <li class="country-filter__item">Армения</li>
+                <li class="country-filter__item">Афганистан</li>
+              </ul>
+            </div>
+
+            <button class="filter__close-button button button-dim">Свернуть</button>
+
+          </div>
+
+
+
+        </div>
+      </section>
+
+      <section class="catalog-form">
+        <div class="container">
+
+          <div class="catalog-form__inner">
+
+            <h2 class="catalog-form__title title">Подберите идеального  попутчика</h2>
+
+            <form class="catalog-form__form">
+
+              <div class="catalog-form__filters accordion">
+
+                <fieldset class="catalog-form__group accordion__item">
+                  <legend class="catalog-form__group-title"><button class="accordion__toggler" type="button">Хобби</button></legend>
+
+                  <ul class="catalog-form__checkboxes accordion__content">
+                    <li class="catalog-form__checkbox">
+                      <label class="checkbox"><input name="hobby" value="gym"  type="checkbox" checked>Спортзал</label>
+                    </li>
+                    <li class="catalog-form__checkbox">
+                      <label class="checkbox"><input name="hobby" value="hookah"  type="checkbox">Кальян</label>
+                    </li>
+                    <li class="catalog-form__checkbox">
+                      <label class="checkbox"><input name="hobby" value="sofa"  type="checkbox">Диван</label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="catalog-form__group accordion__item">
+                  <legend class="catalog-form__group-title"><button class="accordion__toggler" type="button">Музыка</button></legend>
+
+                  <ul class="catalog-form__checkboxes accordion__content">
+                    <li class="catalog-form__checkbox">
+                      <label class="checkbox"><input name="music" value="hrock" type="checkbox" checked>Тяжелый рок</label>
+                    </li>
+                    <li class="catalog-form__checkbox">
+                      <label class="checkbox"><input name="music" value="rrap"  type="checkbox" checked>Русский рэп</label>
+                    </li>
+                    <li class="catalog-form__checkbox">
+                      <label class="checkbox"><input name="music" value="eurodance"  type="checkbox">Евроденс</label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="catalog-form__group accordion__item">
+                  <legend class="catalog-form__group-title"><button class="accordion__toggler" type="button">Еда</button></legend>
+
+                  <ul class="catalog-form__checkboxes accordion__content">
+                    <li class="catalog-form__checkbox">
+                      <label class="checkbox"><input name="food" value="meat" type="checkbox" checked>Мясоед</label>
+                    </li>
+                    <li class="catalog-form__checkbox">
+                      <label class="checkbox"><input name="food" value="proper"  type="checkbox" checked>Сидит на ПП</label>
+                    </li>
+                    <li class="catalog-form__checkbox">
+                      <label class="checkbox"><input name="food" value="vegan"  type="checkbox">Веган-сыроед</label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="catalog-form__group accordion__item">
+                  <legend class="catalog-form__group-title"><button class="accordion__toggler" type="button">Транспорт</button></legend>
+
+                  <ul class="catalog-form__transport-list">
+                    <li class="checkbox-icon">
+                      <input class="checkbox-icon__input" id="catalog-transport-fly" name="transport" value="fly" type="checkbox" checked>
+                      <label class="checkbox-icon__label transport-icon--fly" for="catalog-transport-fly">Самолётом</label>
+                    </li>
+                    <li class="checkbox-icon">
+                      <input class="checkbox-icon__input" id="catalog-transport-car" name="transport" value="car" type="checkbox" checked>
+                      <label class="checkbox-icon__label transport-icon--car" for="catalog-transport-car">Наземным транспортом</label>
+                    </li>
+                    <li class="checkbox-icon">
+                      <input class="checkbox-icon__input" id="catalog-transport-byc" name="transport" value="byc" type="checkbox">
+                      <label class="checkbox-icon__label transport-icon--byc" for="catalog-transport-byc">На велосипеде</label>
+                    </li>
+                    <li class="checkbox-icon">
+                      <input class="checkbox-icon__input" id="catalog-transport-leg" name="transport" value="leg" type="checkbox" checked>
+                      <label class="checkbox-icon__label transport-icon--leg" for="catalog-transport-leg">Пешком</label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="catalog-form__group accordion__item">
+                  <legend class="catalog-form__group-title"><button class="accordion__toggler" type="button">Левел</button></legend>
+
+                  <div class="catalog-form__lvl range-input">
+                    <div class="range-input__box-inputs">
+                      <label class="visual-hidden" for="catalog-lvl-min">От</label>
+                      <input class="range-input__input-min" type="number" id="catalog-lvl-min" name="lvl_min" min="0" max="99" value="30">
+                      <label class="visual-hidden" for="catalog-lvl-max">До</label>
+                      <input class="range-input__input-max" type="number" id="catalog-lvl-max" name="lvl_max" min="1" max="100" value="100">
+                    </div>
+                    <div class="range-input__range">
+                      <div class="range-input__full-bar">
+                        <div class="range-input__bar" style="left: 30%; width: 70%;">
+                          <button class="range-input__min-button" type="button"></button>
+                          <button class="range-input__max-button" type="button"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <button class="catalog-form__submit button" type="submit">Показать</button>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="catalog-result">
+        <div class="container">
+
+          <h2 class="visually-hidden">Результаты поиска:</h2>
+
+          <ul class="catalog-result__list">
+
+            <li class="catalog-result__item companion">
+
+              <img class="companion__avatar" src="./img/people/firsova-mobile.jpg" alt="Девушка в бассейне">
+
+              <p class="companion__name">Таня Фирсова</p>
+
+              <div class="companion__favorite">
+                <button class="button-icon button-icon--selected button-icon--heart">Избранное</button>
+                <span class="companion__favorite-count">1,5 М</span>
+              </div>
+
+              <div class="companion__status companion__status--offline"></div>
+
+              <ul class="companion__tag-list tags">
+                <li class="tags-item">ЗОЖ</li>
+                <li class="tags-item">ПП</li>
+                <li class="tags-item">Фитнес</li>
+                <li class="tags-item">пляж</li>
+                <li class="tags-item">авокадо</li>
+                <li class="tags-item">смузи</li>
+              </ul>
+
+              <div class="companion__country">
+                <p class="companion__country-legend">хочет посетить:</p>
+                <ul class="companion__country-list">
+                  <li class="companion__country-item flag flag--sri-lanka">Шри-Ланка</li>
+                  <li class="companion__country-item flag flag--thailand">Таиланд</li>
+                  <li class="companionq__country-item flag flag--seychelles">Сейшелы</li>
+                </ul>
+              </div>
+
+              <div class="companion__transport">
+                <p class="companion__transport-legend">транспорт:</p>
+                <ul class="companion__transport-list transport-list">
+                  <li class="transport-item transport-item--active">Самолётом</li>
+                  <li class="transport-item">Наземным транспортом</li>
+                  <li class="transport-item">На велосипеде</li>
+                  <li class="transport-item">Пешком</li>
+                </ul>
+              </div>
+
+              <p class="companion__level">
+                <progress value="99" max="100">level</progress>
+              </p>
+
+              <button class="companion__call button">Позвать</button>
+            </li>
+
+            <li class="catalog-result__item companion">
+
+              <img class="companion__avatar" src="./img/people/demin-mobile.jpg" alt="Фото Петя Демин">
+
+              <p class="companion__name">Петя Демин</p>
+
+              <div class="companion__favorite">
+                <button class="button-icon button-icon--heart">Избранное</button>
+                <span class="companion__favorite-count">1500</span>
+              </div>
+
+              <div class="companion__status companion__status--offline"></div>
+
+              <ul class="companion__tag-list tags">
+                <li class="tags-item">бургер</li>
+                <li class="tags-item">бар</li>
+                <li class="tags-item">футбол</li>
+                <li class="tags-item">концерт</li>
+                <li class="tags-item">крафт</li>
+              </ul>
+
+              <div class="companion__country">
+                <p class="companion__country-legend">хочет посетить:</p>
+                <ul class="companion__country-list">
+                  <li class="companion__country-item flag flag--belgium">Бельгия</li>
+                  <li class="companion__country-item flag flag--czech">Чехия</li>
+                </ul>
+              </div>
+
+              <div class="companion__transport">
+                <p class="companion__transport-legend">транспорт:</p>
+                <ul class="companion__transport-list transport-list">
+                  <li class="transport-item transport-item--active">Самолётом</li>
+                  <li class="transport-item transport-item--active">Наземным транспортом</li>
+                  <li class="transport-item">На велосипеде</li>
+                  <li class="transport-item transport-item--active">Пешком</li>
+                </ul>
+              </div>
+
+              <p class="companion__level">
+                <progress value="80" max="100">level</progress>
+              </p>
+
+              <button class="companion__call button">Позвать</button>
+            </li>
+
+            <li class="catalog-result__item companion">
+
+              <img class="companion__avatar" src="./img/people/smolov-mobile.jpg" alt="Марк Смолов">
+
+              <p class="companion__name">Марк Смолов</p>
+
+              <div class="companion__favorite">
+                <button class="button-icon button-icon--heart">Избранное</button>
+                <span class="companion__favorite-count">170</span>
+              </div>
+
+              <div class="companion__status companion__status--offline"></div>
+
+              <ul class="companion__tag-list tags">
+                <li class="tags-item">рэп</li>
+                <li class="tags-item">тату</li>
+                <li class="tags-item">хайпбист</li>
+                <li class="tags-item">кроссовки</li>
+                <li class="tags-item">суприм</li>
+              </ul>
+
+              <div class="companion__country">
+                <p class="companion__country-legend">хочет посетить:</p>
+                <ul class="companion__country-list">
+                  <li class="companion__country-item flag flag--usa">США</li>
+                  <li class="companion__country-item flag flag--australia">Австралия</li>
+                  <li class="companionq__country-item flag flag--dominica">Доминика</li>
+                </ul>
+              </div>
+
+              <div class="companion__transport">
+                <p class="companion__transport-legend">транспорт:</p>
+                <ul class="companion__transport-list transport-list">
+                  <li class="transport-item transport-item--active">Самолётом</li>
+                  <li class="transport-item">Наземным транспортом</li>
+                  <li class="transport-item transport-item--active">На велосипеде</li>
+                  <li class="transport-item">Пешком</li>
+                </ul>
+              </div>
+
+              <p class="companion__level">
+                <progress value="25" max="100">level</progress>
+              </p>
+
+              <button class="companion__call button">Позвать</button>
+            </li>
+
+            <li class="catalog-result__item companion">
+
+              <img class="companion__avatar" src="./img/people/rogovaya-mobile.jpg" alt="Фото Лариса Роговая">
+
+              <p class="companion__name">Лариса Роговая</p>
+
+              <div class="companion__favorite">
+                <button class="button-icon button-icon--heart">Избранное</button>
+                <span class="companion__favorite-count">23</span>
+              </div>
+
+              <div class="companion__status companion__status--online"></div>
+
+              <ul class="companion__tag-list tags">
+                <li class="tags-item">образование</li>
+                <li class="tags-item">карьера</li>
+                <li class="tags-item">учеба</li>
+                <li class="tags-item">линкедин</li>
+              </ul>
+
+              <div class="companion__country">
+                <p class="companion__country-legend">хочет посетить:</p>
+                <ul class="companion__country-list">
+                  <li class="companion__country-item flag flag--unitedkingdom">Великобритания</li>
+                  <li class="companion__country-item flag flag--germany">Германия</li>
+                </ul>
+              </div>
+
+              <div class="companion__transport">
+                <p class="companion__transport-legend">транспорт:</p>
+                <ul class="companion__transport-list transport-list">
+                  <li class="transport-item transport-item--active">Самолётом</li>
+                  <li class="transport-item transport-item--active">Наземным транспортом</li>
+                  <li class="transport-item">На велосипеде</li>
+                  <li class="transport-item">Пешком</li>
+                </ul>
+              </div>
+
+              <p class="companion__level">
+                <progress value="50" max="100">level</progress>
+              </p>
+
+              <button class="companion__call button">Позвать</button>
+            </li>
+
+          </ul>
+
+          <button class="catalog-result__show-more">Показать еще</button>
+          <div class="catalog-result__pagination pagination">
+            <ol class="pagination__page-list">
+              <li class="pagination__page pagination__page--current"><a href="#">1</a></li>
+              <li class="pagination__page"><a href="#">2</a></li>
+              <li class="pagination__page"><a href="#">3</a></li>
+              <li class="pagination__page"><a href="#">4</a></li>
+            </ol>
+            <div class="pagination__controls">
+              <a class="pagination__prev" href="#">Предыдущая страница</a>
+              <a class="pagination__next" href="#">Следущая страница</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+
+        <a class="footer__logo logo" href="#"><img src="./img/logo_mobile.png" alt="Логотип 'Погнали?'"></a>
+        <ul class="footer__social social">
+          <li class="footer__social-item social__item"><a href="#">Facebook</a></li>
+          <li class="footer__social-item social__item"><a href="#">VK</a></li>
+          <li class="footer__social-item social__item"><a href="#">Instagram</a></li>
+        </ul>
+        <p class="footer__creator">Разработано <a class="footer__creator-icon" href="#">htmlacademy</a></p>
+
+      </div>
+    </footer>
+
+    <section class="tariffs-modal modal">
+      <div class="tariffs-modal__wrapper">
+
+        <h2 class="tariffs-modal__title title">Бизнес-тарифы</h2>
+        <ul class="tariffs-modal__list">
+          <li class="tariffs-modal__item">Реклама у блоггера<br>300 000 руб./пост</li>
+          <li class="tariffs-modal__item">Накрутка подписчиков<br>от 1 руб./шт.</li>
+          <li class="tariffs-modal__item">Лайки от ботов<br>от 20 коп./лайк</li>
+          <li class="tariffs-modal__item">Ваш продакт-плейсмент<br>Индивидуально</li>
+        </ul>
+
+        <button class="tariffs-modal__close-button modal__close" type="button">Закрыть окно</button>
+
+      </div>
+    </section>
+
+  </body>
+</html>
