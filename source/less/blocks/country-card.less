@@ -1,0 +1,65 @@
+// .country-card {
+
+// }
+
+.country-card__box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  .reset-a();
+}
+
+.country-card__flag {
+  position: relative;
+  z-index: 2;
+  margin-top: -23px;
+  margin-left: 27px;
+}
+
+.country-card__info {
+  position: relative;
+  z-index: 1;
+  background: white;
+  border-radius: 10px;
+  margin-top: -12px;
+  display: flex;
+  align-items: baseline;
+  padding: 0 24px;
+}
+
+.country-card__name {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: black;
+}
+
+.country-card__slogan {
+  color: @clr_special_grey;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  opacity: 0.3;
+}
+
+.contry-card__people_number {
+  color: #161C35;
+  font-size: 16px;
+  opacity: 0.3;
+  padding-left: 20px;
+  position: relative;
+  font-weight: 500;
+  margin-left: auto;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: url("../../img/icons/user.svg") 50% 50% no-repeat;
+  }
+}

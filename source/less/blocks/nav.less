@@ -1,0 +1,55 @@
+.nav {
+
+  padding: 19px 0;
+
+  background-color: white;
+
+  &--closed {
+    background-color: transparent;
+    .nav__menu,
+    .nav__user-actions,
+    .nav__socials {
+      display: none;
+    }
+
+  }
+}
+
+.nav__menu {
+  .reset-list();
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.nav__menu-item {
+  a {
+    .reset-a();
+    color: #192144;
+  }
+}
+
+.nav__user-actions {
+  .reset-list();
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav__phone,
+.nav__email {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  a {
+    .reset-a();
+    color: @clr_dark_blue;
+  }
+}
+
+.nav__phone {
+  margin-top: 66px;
+}
+
+.nav__email {
+  margin-top: 26px;
+}

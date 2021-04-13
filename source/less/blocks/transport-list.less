@@ -1,0 +1,35 @@
+.transport-list {
+  .reset-list();
+  display: flex;
+  justify-content: center;
+}
+
+.transport-list__item {
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  opacity: 0.15;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &--plane {
+    background-image: url("../../img/icons/plane.svg");
+  }
+
+  &--bus {
+    background-image: url("../../img/icons/bus.svg");
+  }
+
+  &--bisycle {
+    background-image: url("../../img/icons/bisycle.svg");
+  }
+
+  &--foot {
+    background-image: url("../../img/icons/run.svg");
+  }
+}

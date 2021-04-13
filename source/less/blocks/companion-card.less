@@ -1,0 +1,63 @@
+.companion-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.companion-card__level {
+  display: none;
+}
+
+.companion-card__info {
+  background: white;
+  position: relative;
+}
+
+.companion-card__name {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: @clr_basic_blue_light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: #ccc;
+    margin-right: 10px;
+  }
+
+  &--offline::before {
+    background: #F97676;
+  }
+
+  &--online::before {
+    background: #81E31E;
+  }
+
+}
+
+.companion-card__country-list {
+  position: absolute;
+  .reset-list();
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  top: -22px;
+}
+
+.companion-card__country-item {
+  margin: 10px;
+}
+
+.companion-card__tags {
+  padding: 0 30px;
+}

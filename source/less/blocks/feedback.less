@@ -1,0 +1,40 @@
+.feedback {
+  background: #192144;
+  padding-top: 33px;
+  padding-bottom: 62px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+  z-index: 4;
+  text-align: center;
+}
+
+.feedback__text a {
+  color: @clr_basic_yellow;
+}
+
+.feedback__text-question {
+  letter-spacing: 0.01em;
+}
+
+.feedback_buttons {
+  .reset-list();
+  display: inline-block;
+  margin: auto;
+  text-align: left;
+}
+
+.feedback__phone,
+.feedback__email {
+  text-transform: uppercase;
+  font-weight: bold;
+
+  a {
+    .reset-a();
+    color: @clr_basic_yellow;
+  }
+}
+
+.feedback__email {
+  margin-top: 26px;
+}
