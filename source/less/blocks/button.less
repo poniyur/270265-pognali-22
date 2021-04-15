@@ -1,0 +1,42 @@
+.button {
+  .reset-btn();
+  .reset-a();
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: @clr_basic_yellow;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @clr_basic_blue;
+  text-align: center;
+
+  &--big {
+    border-radius: 10px;
+    font-size: 18px;
+    text-transform: none;
+    line-height: 18px;
+    text-align: left;
+    padding: 22px 23px;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      background: url("../../img/pictures/triangle.png") 50% 50% no-repeat;
+      margin-left: auto;
+    }
+  }
+
+  &--login {
+    padding: 10px 0;
+  }
+
+  &--dark-blue-border {
+    border: 3px solid @clr_dark_blue_alt;
+  }
+}

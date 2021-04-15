@@ -1,0 +1,72 @@
+.icon {
+
+  &::before {
+    content: '';
+    display: block;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &--with-text {
+    position: relative;
+    padding-left: 61px;
+  }
+
+  &--with-text::before {
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+  }
+
+  &--small::before {
+    height: 40px;
+    width: 40px;
+  }
+
+  &--dark-blue::before {
+    background-color: @clr_dark_blue;
+  }
+
+  &--yellow::before {
+    background-color: @clr_basic_yellow;
+  }
+
+  &--orange::before {
+    background-color: @clr_special_orange;
+  }
+
+  &--dark_yellow::before {
+    background-color: @clr_special_dark_yellow;
+  }
+
+  &--phone::before {
+    background-image: url("../../img/icons/phone-yellow.svg");
+  }
+
+  &--email::before {
+    background-image: url("../../img/icons/email-yellow.svg");
+  }
+
+  &--blue-phone::before {
+    background-image: url("../../img/icons/phone-blue.svg");
+  }
+
+  &--blue-email::before {
+    background-image: url("../../img/icons/email-blue.svg");
+  }
+
+  &--vk::before {
+    background-image: url("../../img/icons/vk.svg");
+  }
+
+  &--fb::before {
+    background-image: url("../../img/icons/fb.svg");
+  }
+
+  &--insta::before {
+    background-image: url("../../img/icons/insta.svg");
+  }
+}

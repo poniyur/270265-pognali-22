@@ -1,0 +1,72 @@
+.profile-action {
+  background: url("../../img/pictures/rates.png") no-repeat 90% 70px, @clr_lavanda;
+  padding-top: 80px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 5;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.profile-action__inner {
+  padding: 0 20px;
+}
+
+.profile-action__list {
+  .reset-list();
+  color: @clr_special_grey;
+  font-size: 16px;
+  line-height: 24px;
+  counter-reset: profile-action__list-counter;
+}
+
+.profile-action__item {
+  position: relative;
+  counter-increment: profile-action__list-counter;
+  display: flex;
+
+  &::before {
+    content: counter(profile-action__list-counter);
+    color: @clr_white;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: @clr_special_orange;
+    margin-left: auto;
+    margin-top: 15px;
+    order: 2;
+  }
+}
+
+.profile-action__item:nth-child(2)::before {
+  background: @clr_special_dark_yellow;
+}
+
+.profile-action__item:nth-child(3)::before {
+  background: @clr_basic_yellow;
+}
+
+.profile-action__item-border {
+  width: 100%;
+  margin-right: 20px;
+  border-top: 1px solid #E6E8F1;
+  padding-top: 13px;
+  padding-bottom: 15px;
+}
+
+.profile-action__item:last-child .profile-action__item-border {
+  border-bottom: 1px solid #E6E8F1;
+}
+
+.profile-action__bottom {
+  text-align: center;
+}
+.profile-action__show-tarrifs {
+  .reset-a();
+  color: #132576;
+  font-weight: bold;
+  font-size: 16px;
+}
