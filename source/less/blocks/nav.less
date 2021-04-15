@@ -2,7 +2,7 @@
 
   padding: 19px 0;
 
-  background-color: white;
+  background-color: @clr_white;
 
   &--closed {
     background-color: transparent;
@@ -22,11 +22,9 @@
   text-align: center;
 }
 
-.nav__menu-item {
-  a {
-    .reset-a();
-    color: #192144;
-  }
+.nav__menu-link {
+  .reset-a();
+  color: @clr_dark_blue_alt;
 }
 
 .nav__user-actions {
@@ -37,8 +35,6 @@
 
 .nav__phone,
 .nav__email {
-  font-size: 16px;
-  font-weight: 700;
   text-transform: uppercase;
   a {
     .reset-a();
