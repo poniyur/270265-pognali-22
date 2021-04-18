@@ -1,0 +1,252 @@
+.plan-creator {
+  background-color: @clr_light_grey;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  margin-top: -25px;
+  padding-top: 28px;
+  padding-bottom: 90px;
+}
+
+.plan-creator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-creator__header-steps {
+  .reset-list();
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+}
+
+.plan-creator__header-step {
+  display: flex;
+  align-items: center;
+  font-size: 0;
+  &::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: @clr_basic_blue_light;
+    opacity: 0.3;
+  }
+
+  &--current::before {
+    opacity: 1;
+  }
+}
+
+.plan-creator__form-box {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: plan-creator-counter;
+  list-style-position: inside;
+}
+
+.plan-creator__step {
+  background: @clr_white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  counter-increment: plans-list-counter;
+  padding: 24px 0;
+  padding-bottom: 7px;
+
+  &--three {
+    position: relative;
+  }
+}
+
+.plan-creator__step-box {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.plan-creator__step-title {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "Шаг " counters(plans-list-counter, ".") ".";
+  }
+}
+
+.plan-creator__duration {
+  margin-top: 15px;
+}
+
+.plan-creator__with-child {
+  margin-top: 20px;
+}
+
+.plan-creator__calendar {
+  margin-top: 20px;
+}
+
+.plan-creator__next {
+  margin-top: 20px;
+}
+
+.plan-creator__prev {
+  .reset-btn();
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: @clr_basic_blue_light;
+}
+
+.plan-creator__details {
+  .reset-list();
+}
+
+.plan-creator__details-item {
+  margin: 0 10px;
+  padding-right: 16px;
+}
+
+.plan-creator__details-country {
+  .reset-margin();
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-creator__details-item {
+  .plan-creator__details-country::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: @clr_basic_blue_light;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 1px;
+    transform: rotate(90deg);
+    transform-origin: left center;
+  }
+}
+
+.plan-creator__details-item:not(:first-child) {
+  .plan-creator__details-country::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: @clr_basic_blue_light;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 1px;
+    transform: rotate(-90deg);
+    transform-origin: left center;
+  }
+}
+
+.plan-creator__details-item:last-child {
+  .plan-creator__details-country::before {
+    display: none;
+  }
+
+  .plan-creator__text-box {
+    border-left: 2px solid transparent;
+  }
+}
+
+.plan-creator__details-country-text {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 12px;
+  overflow: hidden;
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  color: @clr_basic_blue_light;
+  white-space: nowrap;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    min-width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: @clr_basic_blue_light;
+    margin-right: 10px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: @clr_basic_blue_light;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 17px;
+    transform: scaleX(-1);
+    transform-origin: left center;
+  }
+}
+
+
+.plan-creator__details-flag-box {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 24px;
+    background: url("../../img/pictures/fade_mobile.png") 100% 50% no-repeat;
+    overflow: visible;
+    position: absolute;
+    right: 16px;
+    top: calc(50% - 12px);
+  }
+}
+
+.plan-creator__details-flag {
+  width: 35px;
+  height: 24px;
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 0;
+  z-index: 1;
+
+}
+
+.plan-creator__text-box {
+  padding-left: 14px;
+  border-left: 2px solid @clr_basic_blue_light;
+  padding-top: 3px;
+
+
+  &:not(:last-child) {
+    padding-bottom: 10px;
+  }
+}
+
+.plan-creator__details-text {
+  width: 100%;
+  min-height: 220px;
+  border: 1px solid @clr_light_telegrey;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 16px;
+  line-height: 22px;
+  color: @clr_special_grey;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+

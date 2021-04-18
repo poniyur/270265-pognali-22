@@ -1,0 +1,42 @@
+.checkbox-input {
+
+}
+
+.checkbox-input__input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+}
+
+.checkbox-input__label {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: @clr_basic_blue_light;
+  font-size: 15px;
+
+  &::before {
+    content: "";
+    margin-right: 13px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border: 1px solid @clr_light_telegrey;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &:hover::before {
+    // todo
+  }
+
+  &:active::before {
+    // todo
+  }
+}
+
+.checkbox-input__input:checked ~ .checkbox-input__label::before {
+  background: url("../../img/icons/check.svg") 50% 50% no-repeat;
+}
