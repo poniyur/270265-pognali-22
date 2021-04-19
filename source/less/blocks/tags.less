@@ -3,6 +3,16 @@
   flex-wrap: wrap;
   justify-content: center;
   list-style-type: "#";
+  list-style-position: inside;
+
+  &--profile {
+    justify-content: start;
+    padding: 0 25px;
+    padding-bottom: 10px;
+    .tags__item {
+      opacity: 0.6;
+    }
+  }
 }
 
 .tags__item {
@@ -11,6 +21,7 @@
   color: @clr_special_grey;
 
   &:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 4px;
   }
+
 }

@@ -4,13 +4,22 @@
   display: block;
   width: 100%;
   padding: 15px;
-  background: @clr_basic_yellow;
+  background-color: @clr_basic_yellow;
   border-radius: 25px;
   font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
   color: @clr_basic_blue;
   text-align: center;
+  font-family: inherit;
+
+  &--dim {
+    background-color: @clr_special_blue_light;
+    font-weight: 500;
+    font-size: 20px;
+    color: @clr_basic_blue;
+    padding: 8px;
+  }
 
   &--big {
     border-radius: 10px;
@@ -32,7 +41,7 @@
     }
   }
 
-  &--login {
+  &--small {
     padding: 10px 0;
   }
 

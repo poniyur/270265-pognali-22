@@ -1,0 +1,36 @@
+.page-title {
+  color: @clr_white;
+  background-color: @bg_dark;
+  padding-bottom: 12px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  margin-bottom: 5px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: @clr_basic_yellow;
+    position: absolute;
+    bottom: -5px;
+    z-index: -1;
+  }
+}
+
+.page-title__text {
+  .reset-margin();
+  display: inline-block;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: @clr_special_orange;
+    position: absolute;
+    bottom: -14px;
+    border-radius: 5px;
+  }
+}
