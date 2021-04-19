@@ -5,9 +5,10 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
+  margin-top: -1px;
   margin-bottom: 5px;
 
-  &::before {
+  &--substrate::before {
     content: "";
     display: block;
     width: 100%;
@@ -16,6 +17,11 @@
     position: absolute;
     bottom: -5px;
     z-index: -1;
+  }
+
+  &--catalog {
+    position: relative;
+    z-index: 3;
   }
 }
 

@@ -38,5 +38,17 @@
 }
 
 .checkbox-input__input:checked ~ .checkbox-input__label::before {
-  background: url("../../img/icons/check.svg") 50% 50% no-repeat;
+  background: white url("../../img/icons/check.svg") 50% 50% no-repeat;
+}
+
+.checkbox-input--small {
+
+  .checkbox-input__label {
+    color: @clr_black;
+    &::before {
+      width: 18px;
+      height: 18px;
+      border-color: @clr_white;
+    }
+  }
 }
