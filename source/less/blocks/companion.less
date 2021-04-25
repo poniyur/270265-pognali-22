@@ -1,0 +1,143 @@
+.companion {
+  background: @clr_white;
+  padding-top: 15px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.companion__avatar {
+  // width: 70px;
+  grid-area: ~"1 / 1 / 3 / 2";
+  padding-left: 20px;
+}
+
+.companion__name {
+  grid-area: ~"1 / 2 / 2 / 3";
+  color: @clr_basic_blue_light;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  padding-left: 10px;
+}
+
+.companion__status {
+  grid-area: ~"1 / 3 / 2 / 4";
+  width: 6px;
+  height: 6px;
+  background: @clr_ccc;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: 20px;
+  position: relative;
+  top: 10px;
+
+  &--offline {
+    background: @clr_deep_pink;
+  }
+
+  &--online {
+    background: @clr_electric_lime;
+  }
+}
+
+.companion__favorite {
+  grid-area: ~"2 / 2 / 3 / 3";
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -20px;
+}
+
+.companion__favorite-add {
+  .reset-btn();
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: @clr_linen url("../../img/icons/heart.svg") 50% 50% no-repeat;
+  font-size: 0;
+  margin-right: 5px;
+}
+
+.companion__favorite-count {
+  font-weight: bold;
+  font-size: 14px;
+  color: @clr_basic_blue;
+}
+
+.companion__tag-list {
+  grid-area: ~"3 / 1 / 4 / 4";
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.companion__country {
+  grid-area: ~"4 / 1 / 5 /4";
+
+}
+
+.companion__line-title {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 15px;
+  color: @clr_special_grey;
+  position: relative;
+  overflow: visible;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: @clr_smoky_white;
+    position: relative;
+    top: 3px;
+  }
+
+  &::before {
+    width: 15px;
+    min-width: 15px;
+    margin-right: 11px;
+  }
+
+  &::after {
+    margin-left: 11px;
+  }
+
+  &--no-left {
+    padding-left: 5px;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.companion__country-list {
+  .reset-list();
+  padding-left: 20px;
+}
+
+.companion__country-item {
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+
+.companion__transport {
+  grid-area: ~"5 / 1 / 6 / 3";
+  margin-right: 11px;
+}
+
+.companion__transport-list {
+  padding-left: 20px;
+}
+
+.companion__level {
+  grid-area: ~"5 / 3 / 6 / 4";
+}
+.companion__call {
+  grid-area: ~"6 / 1 / 7 / 4";
+  margin: 20px;
+}

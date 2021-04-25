@@ -2,6 +2,16 @@
   .reset-list();
   display: flex;
   justify-content: center;
+
+  &--grey {
+    justify-content: start;
+    .transport-list__item {
+      background-color: @clr_smoky_white;
+      &::after {
+        background: @clr_smoky_white;
+      }
+    }
+  }
 }
 
 .transport-list__item {

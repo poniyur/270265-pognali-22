@@ -1,0 +1,59 @@
+.checkbox-icon {
+
+}
+
+.checkbox-icon__input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+}
+
+.checkbox-icon__label {
+  font-size: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: @clr_white url("../../img/icons/error.svg") 50% 50% no-repeat;
+  border-radius: 100%;
+  background-size: 17px 16px;
+  position: relative;
+  cursor: pointer;
+
+  &--fly {
+    background-image: url("../../img/icons/plane.svg");
+  }
+
+  &--car {
+    background-image: url("../../img/icons/bus.svg");
+  }
+
+  &--byc {
+    background-image: url("../../img/icons/bisycle.svg");
+  }
+
+  &--leg {
+    background-image: url("../../img/icons/run.svg");
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    // width: 32px;
+    // height: 32px;
+    border-radius: 100%;
+    background-color: @clr_white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.85;
+
+  }
+}
+
+.checkbox-icon__input:checked ~ .checkbox-icon__label::before {
+  display: none;
+}

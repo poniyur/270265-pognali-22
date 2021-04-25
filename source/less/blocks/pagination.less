@@ -1,0 +1,49 @@
+.pagination {
+
+}
+
+.pagination__page-list {
+  display: none;
+}
+
+
+.pagination__controls {
+  display: flex;
+  background: white;
+  border-radius: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 1px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    background: @clr_smoky_white;
+  }
+}
+
+.pagination__prev,
+.pagination__next {
+  width: 50%;
+  font-size: 0;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("../../img/icons/arrow-left.svg") 50% 50% no-repeat;
+  }
+}
+
+.pagination__next::after {
+  transform-origin: center center;
+  transform: rotate(180deg);
+}

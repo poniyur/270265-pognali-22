@@ -1,0 +1,43 @@
+.lvl {
+
+}
+
+.lvl__box {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.lvl__svg {}
+
+.lvl__circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+
+  stroke-width: 3;
+  stroke: @clr_special_orange;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+.lvl__center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lvl__text {
+  font-weight: bold;
+  font-size: 24px;
+  color: @clr_basic_blue_light;
+}

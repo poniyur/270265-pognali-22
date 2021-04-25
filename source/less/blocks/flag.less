@@ -1,10 +1,28 @@
 .flag {
-  width: 35px;
-  height: 24px;
-  font-size: 0;
-  background-position: center center;
-  background-repeat: no-repeat;
+  &:not(.flag--text) {
+    width: 35px;
+    height: 24px;
+    font-size: 0;
+    background-position: center center;
+  }
+
   background-image: url("../../img/icons/error.svg");
+  background-repeat: no-repeat;
+
+  &--text {
+    display: flex;
+    align-items: center;
+    height: 18px;
+    padding-left: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: @clr_basic_blue_light;
+    background-position: left center;
+    // background-size: 26px 18px;
+    background-size: contain;
+  }
+
 
   &--france {
     background-image: url("../../img/pictures/flag-france.png");
