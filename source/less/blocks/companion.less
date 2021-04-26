@@ -46,10 +46,10 @@
   display: flex;
   align-items: center;
   position: relative;
-  left: -20px;
+  left: -25px;
 }
 
-.companion__favorite-add {
+.companion__favorite-icon {
   .reset-btn();
   width: 30px;
   height: 30px;
@@ -57,6 +57,9 @@
   background: @clr_linen url("../../img/icons/heart.svg") 50% 50% no-repeat;
   font-size: 0;
   margin-right: 5px;
+  &--add {
+    background: @clr_lavanda url("../../img/icons/heart-empty.svg") 50% 50% no-repeat;
+  }
 }
 
 .companion__favorite-count {
