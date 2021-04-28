@@ -1,0 +1,91 @@
+.catalog-form {
+  background: @clr_smoky_white;
+  margin-top: -30px;
+  padding-top: 50px;
+  padding-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.catalog-form__inner {
+  background: @clr_basic_yellow;
+  padding: 26px 25px 22px;
+  border-radius: 20px;
+}
+
+.catalog-form__title {
+  width: 1px;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: @clr_basic_blue_light;
+}
+
+.catalog-form__filters {
+  border-top: 1px solid @clr_saffron;
+  margin-top: 25px;
+}
+
+.catalog-form__group {
+  .reset-margin();
+  border: none;
+  margin-bottom: 12px;
+  padding: 0;
+  padding-bottom: 14px;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid @clr_saffron;
+  }
+}
+
+.catalog-form__group-title {
+  padding-inline-start: 0px;
+  padding-inline-end: 0px;
+  width: 100%;
+
+}
+
+.catalog-form__group-button {
+  .reset-btn();
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: @clr_basic_blue_light;
+  text-align: left;
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 6px;
+    background: url("../../img/icons/accordion-toggler.svg") 50% 50% no-repeat;
+  }
+}
+
+.catalog-form__checkboxes {
+  .reset-margin();
+  .reset-list();
+}
+
+.catalog-form__checkbox {
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
+}
+
+.catalog-form__transport-list  {
+  .reset-list();
+  display: flex;
+  .checkbox-icon {
+    margin-right: 2px;
+  }
+}
+
+.catalog-form__submit {
+  background: @clr_white;
+}

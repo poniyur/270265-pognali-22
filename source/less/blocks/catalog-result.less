@@ -1,0 +1,37 @@
+.catalog-result {
+  background: @clr_smoky_white;
+  padding-top: 15px;
+  padding-bottom: 80px;
+}
+
+.catalog-result__list {
+  .reset-list();
+}
+
+.catalog-result__item {
+  margin-bottom: 10px;
+}
+
+.catalog-result__show-more {
+  .reset-btn();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: @clr_basic_blue_light;
+  width: 100%;
+  padding: 10px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("../../img/icons/plus-more.svg") 50% 50% no-repeat;
+    margin-right: 15px;
+  }
+}
+
+
