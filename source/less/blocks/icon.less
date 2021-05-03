@@ -70,3 +70,27 @@
     background-image: url("../../img/icons/insta.svg");
   }
 }
+
+
+@media @desktop {
+  .icon {
+    &--desktop-special-orange::before {
+      background-color: @clr_special_orange;
+    }
+
+    &--desktop-special-orange.icon--phone::before {
+      background-image: url("../../img/icons/phone-blue.svg");
+    }
+
+    &--desktop-special-dark-yellow::before {
+      background-color: @clr_special_dark_yellow;
+    }
+
+    &--desktop-special-dark-yellow.icon--email::before {
+      background-image: url("../../img/icons/email-blue.svg");
+    }
+  }
+}
+
+
+

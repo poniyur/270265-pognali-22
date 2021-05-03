@@ -16,3 +16,27 @@
 .routes__item {
   margin-top: 25px;
 }
+
+@media @desktop {
+  .routes__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .routes__list {
+    grid-area: ~"1 / 1 / 4 /2";
+  }
+
+  .routes__title {
+    grid-area: ~"1 / 2 / 2 / 3";
+  }
+
+  .routes__text {
+    grid-area: ~"2 / 2 / 3 / 3";
+  }
+
+  .routes__button-box {
+    grid-area: ~"3 / 2 / 4 / 3";
+  }
+}

@@ -1,13 +1,12 @@
 .flag {
   &:not(.flag--text) {
-    width: 35px;
-    height: 24px;
     font-size: 0;
     background-position: center center;
   }
 
   background-image: url("../../img/icons/error.svg");
   background-repeat: no-repeat;
+  background-size: cover;
 
   &--text {
     display: flex;
@@ -19,7 +18,6 @@
     text-transform: uppercase;
     color: @clr_basic_blue_light;
     background-position: left center;
-    // background-size: 26px 18px;
     background-size: contain;
   }
 
