@@ -6,13 +6,179 @@
 
   &--closed {
     background-color: transparent;
-    .nav__menu,
-    .nav__user-actions,
-    .nav__socials {
+    .nav__menu-box,
+    .nav__user-actions-box,
+    .nav__socials-box,
+    .nav__login-box {
       display: none;
+    }
+  }
+
+  @media @tablet {
+    .nav__box {
+      align-items: center;
+      padding-bottom: 0;
+    }
+
+    .nav__logo-box,
+    .nav__toggler-box,
+    .nav__login-box {
+      width: 33.3%;
+    }
+
+    .nav__logo-box {
+      order: -3;
+    }
+
+    .nav__toggler-box {
+      order: -2;
+      text-align: center;
+    }
+
+    .nav__login-box {
+      order: -1;
+      display: block;
+    }
+
+    .nav__login {
+      max-width: 188px;
+      margin-right: 0;
+      font-size: 20px;
+    }
+
+    .nav__menu-box {
+      padding: 50px;
+    }
+
+    .nav__menu {
+      text-align: left;
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 71px;
+    }
+
+    .nav__user-actions-box {
+      padding-left: 50px;
+    }
+
+    .nav__user-actions {
+      width: 100%;
+      margin: 0;
+    }
+
+    .nav__socials-box {
+      padding: 50px 50px 25px;
+
+    }
+
+    .nav__socials {
+      justify-content: start;
     }
 
   }
+
+  @media @desktop {
+    background-color: transparent;
+    .nav__box > * {
+      width: auto;
+    }
+
+    .nav__toggler-box,
+    .nav__socials-box {
+      display: none;
+    }
+
+    .nav__logo-box {
+      order: 1;
+    }
+
+    .nav__menu-box {
+      display: block;
+      order: 2;
+      padding: 0;
+      margin-left: 100px;
+    }
+
+    .nav__menu {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      display: flex;
+    }
+
+    .nav__menu-link {
+      color: @clr_white;
+      padding: 17px;
+    }
+
+    .nav__user-actions-box {
+      display: block;
+      order: 3;
+      padding: 0;
+      margin-left: auto;
+    }
+
+    .nav__user-actions {
+      display: flex;
+    }
+
+    .nav__phone {
+      margin: 0;
+      height: 50px;
+    }
+
+    .nav__email {
+      margin: 0;
+      height: 50px;
+    }
+
+    .nav__user-link {
+      font-size: 0;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      display: inline-block;
+
+      &::before {
+        position: static;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .nav__login-box {
+      display: block;
+      order: 4;
+    }
+
+    .nav__login {
+      max-width: 100%;
+      padding: 13px 29px;
+    }
+
+  }
+}
+
+.nav__box  {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+// LOGO
+.nav__logo {
+  background: rgb(73, 190, 73);
+}
+
+
+// TOGGLER
+.nav__toggler-box {
+
+}
+
+// MENU
+.nav__menu-box {
+  width: 100%;
 }
 
 .nav__menu {
@@ -20,6 +186,8 @@
   font-size: 30px;
   line-height: 35px;
   text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .nav__menu-link {
@@ -27,19 +195,33 @@
   color: @clr_dark_blue_alt;
 }
 
+// LOGIN
+.nav__login-box {
+  width: 100%;
+}
+
+.nav__login {
+  max-width: 270px;
+  margin: auto;
+}
+
+// USER ACTRIONS
+.nav__user-actions-box {
+  width: 100%;
+}
 .nav__user-actions {
   .reset-list();
   font-size: 16px;
   font-weight: 700;
+  margin: auto;
+  max-width: 270px;
+  width: 100%;
+  text-transform: uppercase;
 }
 
-.nav__phone,
-.nav__email {
-  text-transform: uppercase;
-  a {
+.nav__user-link {
     .reset-a();
     color: @clr_dark_blue;
-  }
 }
 
 .nav__phone {
@@ -48,4 +230,10 @@
 
 .nav__email {
   margin-top: 26px;
+}
+
+// SOCIALS
+.nav__socials-box {
+  width: 100%;
+  margin-top: 30px;
 }

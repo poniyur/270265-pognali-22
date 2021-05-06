@@ -28,7 +28,7 @@
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
-  color: black;
+  color: @clr_black;
 }
 
 .country-card__slogan {
@@ -57,5 +57,59 @@
     width: 16px;
     height: 16px;
     background: url("../../img/icons/user.svg") 50% 50% no-repeat;
+    background-size: contain;
   }
+}
+
+
+@media @tablet {
+  .country-card__box {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .country-card__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  .country-card__flag {
+    order: 2;
+    margin: auto 0;
+    width: 70px;
+    height: 47px;
+    left: -35px;
+  }
+
+  .country-card__info {
+    width: 70%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .country-card__name {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .country-card__slogan {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .contry-card__people_number {
+    margin-left: 0;
+    margin-top: 0;
+
+    &::before {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
 }
