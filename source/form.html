@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body class="body">
+  <body class="body page-form">
 
     <header class="header">
       <nav class="header__nav nav nav--closed">
@@ -30,11 +30,14 @@
             </ul>
           </div>
 
+          <div class="nav__login-box">
+            <a class="nav__login button" href="#">Авторизация</a>
+          </div>
+
           <div class="nav__user-actions-box">
             <ul class="nav__user-actions">
-              <li class="nav__login"><a class="button" href="#">Авторизация</a></li>
-              <li class="nav__phone"><a class="icon icon--dark-blue icon--phone icon--with-text" href="tel:88005558628">8 800 555-86-28</a></li>
-              <li class="nav__email"><a class="icon icon--dark-blue icon--email icon--with-text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+              <li class="nav__phone"><a class="nav__user-link icon icon--dark-blue icon--phone icon--with-text" href="tel:88005558628">8 800 555-86-28</a></li>
+              <li class="nav__email"><a class="nav__user-link icon icon--dark-blue icon--email icon--with-text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
             </ul>
           </div>
 
@@ -63,7 +66,7 @@
 
           <div class="user-profile__box">
 
-            <div class="user-profile__level level">
+            <div class="user-profile__level-box level">
               <progress value="80" max="100">level</progress>
             </div>
 
@@ -71,29 +74,34 @@
               <img class="user-profile__photo-img" src="./img/people/petya_demin.jpg" alt="Фото - Пётр Демин">
             </div>
 
+            <div class="user-profile__button-box">
+              <button class="user-profile__add-photo button button--blue-light"><span class="user-profile__button-span">Сменить</span> фото</button>
+            </div>
 
-            <button class="user-profile__add-photo button button--blue-light">Сменить фото</button>
+            <div class="user-profile__tags-box">
+              <fieldset class="user-profile__tags cluster">
+                <legend class="cluster__title">Тэги</legend>
+                <ul class="tags tags--profile">
+                  <li class="tags__item">бургер</li>
+                  <li class="tags__item">бар</li>
+                  <li class="tags__item">футбол</li>
+                  <li class="tags__item">концерт</li>
+                  <li class="tags__item">крафт</li>
+                </ul>
+              </fieldset>
+            </div>
 
-            <fieldset class="user-profile__tags cluster">
-              <legend class="cluster__title">Тэги</legend>
-              <ul class="tags tags--profile">
-                <li class="tags__item">бургер</li>
-                <li class="tags__item">бар</li>
-                <li class="tags__item">футбол</li>
-                <li class="tags__item">концерт</li>
-                <li class="tags__item">крафт</li>
-              </ul>
-            </fieldset>
-
-            <fieldset class="user-profile__transport cluster">
-              <legend class="cluster__title">Транспорт</legend>
-              <ul class="user-profile__transport transport-list">
-                <li class="transport-list__item transport-list__item--plane transport-list__item--active">Самолётом</li>
-                <li class="transport-list__item transport-list__item--bus transport-list__item--active">Наземным транспортом</li>
-                <li class="transport-list__item transport-list__item--bisycle">На велосипеде</li>
-                <li class="transport-list__item transport-list__item--foot transport-list__item--active">Пешком</li>
-              </ul>
-            </fieldset>
+            <div class="user-profile__transport-box">
+              <fieldset class="user-profile__transport cluster">
+                <legend class="cluster__title">Транспорт</legend>
+                <ul class="user-profile__transport transport-list">
+                  <li class="transport-list__item transport-list__item--plane transport-list__item--active">Самолётом</li>
+                  <li class="transport-list__item transport-list__item--bus transport-list__item--active">Наземным транспортом</li>
+                  <li class="transport-list__item transport-list__item--bisycle">На велосипеде</li>
+                  <li class="transport-list__item transport-list__item--foot transport-list__item--active">Пешком</li>
+                </ul>
+              </fieldset>
+            </div>
 
           </div>
 
@@ -108,12 +116,14 @@
           <ol class="my-plans__list plans-list">
             <li class="plans-list__item">
               <p class="plans-list__title">Франция, Италия</p>
-              <p class="plans-list__info">3 попутчика<br><time datetime="2021-03-26">26 мар</time> — <time datetime="2021-03-29">29 мар</time></p>
+              <p class="plans-list__info">3 попутчика</p>
+              <p class="plans-list__time"><time datetime="2021-03-26">26 мар</time> — <time datetime="2021-03-29">29 мар</time></p>
               <button class="plans-list__edit-button" type="button">Изменить</button>
             </li>
             <li class="plans-list__item">
               <p class="plans-list__title">Таиланд, Индонезия</p>
-              <p class="plans-list__info">1 попутчик<br><time datetime="2021-07-01">1 июл</time> — <time datetime="2021-07-15">15 июл</time></p>
+              <p class="plans-list__info">1 попутчика</p>
+              <p class="plans-list__time"><time datetime="2021-07-01">1 июл</time> — <time datetime="2021-07-15">15 июл</time></p>
               <button class="plans-list__edit-button" type="button">Изменить</button>
             </li>
           </ol>
@@ -252,7 +262,11 @@
                   </table>
                 </div>
 
-                <button class="button button--small plan-creator__next  stepper__next" type="button">Следующий шаг</button>
+                <div class="plan-creator__buttons">
+                  <button class="button button--small plan-creator__next  stepper__next" type="button">Следующий шаг</button>
+                </div>
+
+
               </li>
 
               <li class="plan-creator__step plan-creator__step-box stepper__item">
@@ -291,14 +305,14 @@
                   </div>
 
                   <div class="country-picker__item country-picker__item--choose">
-                    <button class="country-picker__delete country-picker__delete--hide" type="button">Удалить</button>
+                    <button class="country-picker__delete" type="button">Удалить</button>
+                    <!-- <button class="country-picker__delete country-picker__delete--hide" type="button">Удалить</button> -->
                     <div class="country-picker__box">
                       <div class="country-picker__select">
                       <!-- расскоментировать, чтобы посмотреть -->
                       <!-- <div class="country-picker__select country-picker__select--dropdown"> -->
-                        Выберите страну
+                        ану
                         <button class="country-picker__toggler" type="button">Скрыть/Раскрыть список стран</button>
-
                       </div>
                       <div class="country-picker__flag"></div>
                       <div class="country-picker__dropdown">
@@ -359,11 +373,17 @@
                     </div>
                   </div>
 
-                  <button class="country-picker__add" type="button">Добавить страну</button>
+                  <div class="country-picker__add-box">
+                    <button class="country-picker__add" type="button">Добавить страну</button>
+                  </div>
 
                 </div>
-                <button class="plan-creator__next button button--small stepper__next" type="button">Следующий шаг</button>
-                <button class="plan-creator__prev stepper__prev" type="button">На шаг назад</button>
+
+                <div class="plan-creator__buttons">
+                  <button class="plan-creator__next button button--small stepper__next" type="button">Следующий шаг</button>
+                  <button class="plan-creator__prev stepper__prev" type="button">На шаг назад</button>
+                </div>
+
               </li>
 
               <li class="plan-creator__step stepper__item">
@@ -399,10 +419,12 @@
                     </div>
                   </li>
                 </ol>
-                <div class="plan-creator__step-box">
+
+                <div class="plan-creator__step-buttons">
                   <button class="plan-creator__next button button--small stepper__next" type="submit">Отправить</button>
                   <button class="plan-creator__prev stepper__prev" type="button">На шаг назад</button>
                 </div>
+
               </li>
 
             </ol>

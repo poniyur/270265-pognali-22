@@ -1,6 +1,5 @@
 .user-profile {
-  background: #EDEFF6;
-  padding-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .user-profile__box {
@@ -8,16 +7,95 @@
   flex-wrap: wrap;
 }
 
-.user-profile__level,
-.user-profile__photo-box {
+.user-profile__level-box {
+  order: 1;
   width: 50%;
 }
 
 .user-profile__photo-box {
+  order: 2;
+  width: 50%;
   padding: 20px;
 }
 
 .user-profile__photo-img {
   width: 100%;
   border-radius: 100%;
+}
+
+.user-profile__button-box {
+  width: 100%;
+  order: 3;
+}
+
+.user-profile__tags-box {
+  width: 100%;
+  order: 4;
+}
+
+.user-profile__transport-box {
+  width: 100%;
+  order: 5;
+}
+
+
+@media @tablet {
+  .user-profile__level-box {
+    order: 0;
+    width: auto;
+  }
+
+  .user-profile__photo-box {
+    width: auto;
+    width: 94px;
+    height: 94px;
+  }
+
+  .user-profile__transport-box {
+    order: 1;
+    width: auto;
+    flex-grow: 1;
+  }
+}
+
+@media @desktop {
+  .user-profile__level-box {
+    order: 1;
+    margin-left: auto;
+    height: 190px;
+    margin-top: -190px;
+    position: relative;
+    // z-index: 1;
+  }
+
+  .user-profile__photo-box {
+    order: 2;
+    width: 190px;
+    height: 190px;
+    margin-top: -190px;
+    position: relative;
+    z-index: 1;
+  }
+  .user-profile__button-box {
+    order: 3;
+  }
+
+  .user-profile__add-photo {
+    width: 190px;
+    margin-left: auto;
+  }
+
+  .user-profile__button-span {
+    display: none;
+  }
+
+  .user-profile__tags-box {
+    order: 4;
+    width: 60%;
+  }
+
+  .user-profile__transport-box {
+    order: 5;
+    width: 40%;
+  }
 }

@@ -11,6 +11,12 @@
   margin-bottom: 10px;
   border-radius: 10px;
   color: @clr_basic_blue_light;
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .plans-list__title {
@@ -20,9 +26,28 @@
     counter-increment: plans-list-counter;
     content: counters(plans-list-counter, ".") ". ";
   }
+
+  @media @tablet {
+    display: flex;
+    width: 100%;
+    &::before {
+      order: 2;
+      margin-left: auto;
+    }
+  }
+
+  @media @desktop {
+    width: auto;
+    width: 50%;
+    &::before {
+      order: -1;
+      margin-left: 0;
+    }
+  }
 }
 
-.plans-list__info {
+.plans-list__info,
+.plans-list__time {
   font-size: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
