@@ -11,7 +11,6 @@
 
     <header class="header">
       <nav class="header__nav nav nav--closed">
-      <!-- <nav class="header__nav nav"> -->
         <div class="container nav__box">
 
           <div class="nav__logo-box">
@@ -66,8 +65,27 @@
 
           <div class="user-profile__box">
 
-            <div class="user-profile__level-box level">
-              <progress value="80" max="100">level</progress>
+            <div class="user-profile__level-box">
+              <div class="lvl">
+                <div class="lvl__box lvl__box--form">
+                  <svg
+                    class="lvl__svg"
+                    height="100"
+                    width="100"
+                  >
+                    <circle
+                      class="lvl__circle"
+                      r="48"
+                      cx="50"
+                      cy="50"
+                    />
+                  </svg>
+                  <div class="lvl__center">
+                    <span class="lvl__text">80</span>
+                    <span class="lvl__sub-text">level</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="user-profile__photo-box">
@@ -79,7 +97,7 @@
             </div>
 
             <div class="user-profile__tags-box">
-              <fieldset class="user-profile__tags cluster">
+              <fieldset class="user-profile__tags cluster cluster--tags">
                 <legend class="cluster__title">Тэги</legend>
                 <ul class="tags tags--profile">
                   <li class="tags__item">бургер</li>
@@ -93,7 +111,7 @@
 
             <div class="user-profile__transport-box">
               <fieldset class="user-profile__transport cluster">
-                <legend class="cluster__title">Транспорт</legend>
+                <legend class="cluster__title cluster__title--transport">Транспорт</legend>
                 <ul class="user-profile__transport transport-list">
                   <li class="transport-list__item transport-list__item--plane transport-list__item--active">Самолётом</li>
                   <li class="transport-list__item transport-list__item--bus transport-list__item--active">Наземным транспортом</li>
@@ -147,37 +165,42 @@
           <form class="plan-creator__form stepper">
             <ol class="plan-creator__form-box">
 
-              <li class="plan-creator__step plan-creator__step-box stepper__item stepper__item--current">
-                <h3 class="plan-creator__step-title title title--blue">Даты пребывания</h3>
+              <li class="plan-creator__step plan-creator__step--current plan-creator__step-box stepper__item stepper__item--current">
+                <h3 class="plan-creator__step-title title title--blue">
+                  <span>Шаг 1.</span>
+                  Даты пребывания
+                </h3>
 
                 <p class="plan-creator__step-text text text--grey">
                   Укажите предпочтительное количество попутчиков, которых
                   вы хотели бы позвать в поездку, и ее предполагаемую длительность.
                 </p>
 
-                <div class="plan-creator__companion-count number-input">
-                  <label class="number-input__label" for="companion-count">Ищу попутчиков:</label>
-                  <span class="number-input__unit">Чел.</span>
-                  <div class="number-input__box">
-                    <button class="number-input__minus" type="button"></button>
-                    <input class="number-input__input" id="companion-count" type="number" value="2">
-                    <button class="number-input__plus" type="button"></button>
+                <div class="plan-creator__step-1-inputs">
+                  <div class="plan-creator__companion-count number-input">
+                    <label class="number-input__label" for="companion-count">Ищу попутчиков:</label>
+                    <span class="number-input__unit">Чел.</span>
+                    <div class="number-input__box">
+                      <button class="number-input__minus" type="button"></button>
+                      <input class="number-input__input" id="companion-count" type="number" value="2">
+                      <button class="number-input__plus" type="button"></button>
+                    </div>
                   </div>
-                </div>
 
-                <div class="plan-creator__duration number-input">
-                  <label class="number-input__label" for="duration">Длительность:</label>
-                  <span class="number-input__unit">Дн.</span>
-                  <div class="number-input__box">
-                    <button class="number-input__minus" type="button"></button>
-                    <input class="number-input__input" id="duration" type="number" value="3">
-                    <button class="number-input__plus" type="button"></button>
+                  <div class="plan-creator__duration number-input">
+                    <label class="number-input__label" for="duration">Длительность:</label>
+                    <span class="number-input__unit">Дн.</span>
+                    <div class="number-input__box">
+                      <button class="number-input__minus" type="button"></button>
+                      <input class="number-input__input" id="duration" type="number" value="3">
+                      <button class="number-input__plus" type="button"></button>
+                    </div>
                   </div>
-                </div>
 
-                <div class="plan-creator__with-child checkbox-input">
-                  <input class="checkbox-input__input" name="with-child" id="with-child" type="checkbox" checked>
-                  <label class="checkbox-input__label" for="with-child">Можно с детьми</label>
+                  <div class="plan-creator__with-child checkbox-input">
+                    <input class="checkbox-input__input" name="with-child" id="with-child" type="checkbox" checked>
+                    <label class="checkbox-input__label" for="with-child">Можно с детьми</label>
+                  </div>
                 </div>
 
                 <div class="plan-creator__calendar calendar">
@@ -193,13 +216,13 @@
                   <table class="calendar__day-picker" cellspacing="0">
                     <thead>
                       <tr class="calendar__head">
-                        <th class="calendar__head-item">П</th>
-                        <th class="calendar__head-item">В</th>
-                        <th class="calendar__head-item">С</th>
-                        <th class="calendar__head-item">Ч</th>
-                        <th class="calendar__head-item">П</th>
-                        <th class="calendar__head-item">С</th>
-                        <th class="calendar__head-item">В</th>
+                        <th class="calendar__head-item">Пн</th>
+                        <th class="calendar__head-item">Вт</th>
+                        <th class="calendar__head-item">Сс</th>
+                        <th class="calendar__head-item">Чт</th>
+                        <th class="calendar__head-item">Пт</th>
+                        <th class="calendar__head-item calendar__head-item--weekend">Сб</th>
+                        <th class="calendar__head-item calendar__head-item--weekend">Вс</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -263,14 +286,17 @@
                 </div>
 
                 <div class="plan-creator__buttons">
-                  <button class="button button--small plan-creator__next  stepper__next" type="button">Следующий шаг</button>
+                  <button class="plan-creator__next button button--small-to-big button--semi-big plan-creator__next  stepper__next" type="button">Следующий шаг</button>
                 </div>
 
 
               </li>
 
               <li class="plan-creator__step plan-creator__step-box stepper__item">
-                <h3 class="plan-creator__step-title title title--blue">Даты пребывания</h3>
+                <h3 class="plan-creator__step-title title title--blue">
+                  <span>Шаг 2.</span>
+                  Даты пребывания
+                </h3>
 
                 <p class="plan-creator__step-text text text--grey">
                   Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
@@ -285,8 +311,8 @@
                         <span class="country-picker__current">Босния и герцеговина</span>
                         <button class="country-picker__toggler">Скрыть/Раскрыть список стран</button>
                       </div>
-                      <div class="country-picker__flag">
-                        <span class="flag flag--bosnia"></span>
+                      <div class="country-picker__flag-box">
+                        <span class="country-picker__flag flag flag--bosnia"></span>
                       </div>
                     </div>
                   </div>
@@ -298,8 +324,8 @@
                         <span class="country-picker__current">Чехия</span>
                         <button class="country-picker__toggler">Скрыть/Раскрыть список стран</button>
                       </div>
-                      <div class="country-picker__flag">
-                        <span class="flag flag--czech"></span>
+                      <div class="country-picker__flag-box">
+                        <span class="country-picker__flag flag flag--czech"></span>
                       </div>
                     </div>
                   </div>
@@ -380,7 +406,7 @@
                 </div>
 
                 <div class="plan-creator__buttons">
-                  <button class="plan-creator__next button button--small stepper__next" type="button">Следующий шаг</button>
+                  <button class="plan-creator__next button button--small-to-big stepper__next" type="button">Следующий шаг</button>
                   <button class="plan-creator__prev stepper__prev" type="button">На шаг назад</button>
                 </div>
 
@@ -388,7 +414,10 @@
 
               <li class="plan-creator__step stepper__item">
                 <div class="plan-creator__step-box">
-                  <h3 class="plan-creator__step-title title title--blue">Развлечения</h3>
+                  <h3 class="plan-creator__step-title title title--blue">
+                    <span>Шаг 3.</span>
+                    Развлечения
+                  </h3>
 
                   <p class="plan-creator__step-text text text--grey">
                     Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
@@ -420,7 +449,7 @@
                   </li>
                 </ol>
 
-                <div class="plan-creator__step-buttons">
+                <div class="plan-creator__buttons plan-creator__step-box">
                   <button class="plan-creator__next button button--small stepper__next" type="submit">Отправить</button>
                   <button class="plan-creator__prev stepper__prev" type="button">На шаг назад</button>
                 </div>
@@ -449,5 +478,7 @@
       </div>
     </footer>
 
+    <script src="./js/common.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>

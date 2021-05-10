@@ -14,9 +14,15 @@
 .calendar__next-month {
   .reset-btn;
   font-size: 0;
-  width: 11%;
+  width: 25px;
   opacity: 0.3;
-  background: url("../../img/icons/arrow-back.svg") 0% 50% no-repeat;;
+  background: url("../../img/icons/arrow-back.svg") 0% 50% no-repeat;
+
+  @media @tablet {
+    width: 17px + 18px + 17px;
+    background-position: 50% 50%;
+    background-size: 12px;
+  }
 }
 
 .calendar__month-list {
@@ -27,6 +33,11 @@
   font-size: 20px;
   color: @clr_basic_blue_light;
   padding: 11px 0;
+
+  @media @tablet {
+    font-size: 36px;
+    padding: 20px 0;
+  }
 }
 
 .calendar__next-month {
@@ -41,21 +52,36 @@
 
 
 .calendar__head-item {
+  height: 31px;
+  text-align: center;
+  font-size: 14px;
   font-weight: normal;
+  font-size: 0px;
+
+  @media @tablet {
+    font-size: 18px;
+  }
+
+  &:first-letter {
+    font-size: 14px;
+    @media @tablet {
+      font-size: 18px;
+    }
+  }
+
+  &--weekend {
+    color : @clr_spicy_orange;
+  }
 }
 
-// МЕГА КВАДРАТЫ
-.calendar__head-item,
 .calendar__cell {
   text-align: center;
   font-size: 14px;
+  height: 31px;
 
-  height: 0;
-  &:after,
-  &:before {
-    content: '';
-    display: block;
-    padding-bottom: calc(50% - 0.571em);
+  @media @tablet {
+    height: 69px;
+    font-size: 18px;
   }
 }
 
@@ -81,8 +107,8 @@
 
   &--current {
     transform: perspective(1000px) translateZ(1px);
-    box-shadow: 0px 0px 0px 1px @clr_spicy_orange inset, 0px 0px 0px 0.5px @clr_spicy_orange;
-    border: 1px solid @clr_spicy_orange;
+    box-shadow: 0px 0px 0px 2px @clr_spicy_orange inset, 0px 0px 0px 1px @clr_spicy_orange;
+    border: 2px solid @clr_spicy_orange;
   }
 
 }

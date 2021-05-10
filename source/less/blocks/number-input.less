@@ -8,12 +8,22 @@
 
 .number-input__label {
   letter-spacing: 0.09em;
+
+  @media @tablet {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .number-input__unit {
   margin-left: auto;
   opacity: 0.3;
   letter-spacing: 0.07em;
+
+  @media @tablet {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+  }
 }
 
 .number-input__box {
@@ -36,6 +46,10 @@
   position: relative;
   display: flex;
   height: 43px;
+
+  @media @tablet {
+    height: 70px;
+  }
 }
 
 .number-input__input {
@@ -44,6 +58,11 @@
   text-align: center;
   padding: 0 40px;
   border-radius: 4px;
+
+  @media @tablet {
+    padding: 0 (23px * 2 + 20px);
+    font-size: 20px;
+  }
 }
 
 .number-input__minus,
@@ -52,15 +71,23 @@
   position: absolute;
   bottom: 0;
   top: 0;
-  width: 18%;
+  width: 14px * 3;
+
+  @media @tablet {
+    width: 23px * 2 + 20px;
+  }
 
   &::before {
     content: "";
     display: block;
-    width: 35%;
+    width: 14px;
     height: 2px;
     background-color: @clr_ccc;
     margin: auto;
+
+    @media @tablet {
+      width: 20px;
+    }
   }
 }
 
@@ -73,11 +100,15 @@
   &::after {
     content: "";
     display: block;;
-    width: 35%;
+    width: 14px;
     height: 2px;
     background-color: @clr_ccc;
     margin: auto;
     transform-origin: center center;
     transform: translateY(-2px) rotate(90deg);
+
+    @media @tablet {
+      width: 20px;
+    }
   }
 }

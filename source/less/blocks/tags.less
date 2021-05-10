@@ -9,9 +9,20 @@
     justify-content: start;
     padding: 0 25px;
     padding-bottom: 10px;
+    @media @tablet {
+      padding-bottom: 0;
+      padding-top: 5px;
+    }
+
     .tags__item {
       opacity: 0.6;
+      @media @tablet {
+        font-size: 20px;
+        font-size: 22px;
+      }
     }
+
+
   }
 
   &--catalog {
@@ -34,6 +45,9 @@
 
   &:not(:last-child) {
     margin-right: 4px;
+    @media @tablet {
+      margin-right: 7px;
+    }
   }
 
 }

@@ -7,6 +7,7 @@
   position: relative;
   margin-top: -1px;
   margin-bottom: 5px;
+  padding-top: 20px;
 
   &--substrate::before {
     content: "";
@@ -17,11 +18,18 @@
     position: absolute;
     bottom: -5px;
     z-index: -1;
+    @media @tablet {
+      background-color: transparent;
+    }
   }
 
   &--catalog {
     position: relative;
     z-index: 3;
+  }
+
+  @media @tablet {
+    padding-top: 80px;
   }
 }
 
@@ -38,5 +46,10 @@
     position: absolute;
     bottom: -14px;
     border-radius: 5px;
+  }
+
+  @media @tablet {
+    padding-bottom: 30px;
+    font-size: 60px;
   }
 }

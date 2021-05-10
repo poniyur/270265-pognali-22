@@ -1,5 +1,5 @@
 .user-profile {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .user-profile__box {
@@ -10,12 +10,15 @@
 .user-profile__level-box {
   order: 1;
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-profile__photo-box {
   order: 2;
   width: 50%;
-  padding: 20px;
+  padding: 17px;
 }
 
 .user-profile__photo-img {
@@ -40,9 +43,23 @@
 
 
 @media @tablet {
+
+  .user-profile {
+    padding-top: 50px;
+  }
+
+  .user-profile__box {
+    justify-content: space-between;
+  }
+
   .user-profile__level-box {
     order: 0;
-    width: auto;
+    width: 94px;
+    height: 94px;
+    & > * {
+      // пока не знаю, как делать адаптивный svg
+      transform: scale(0.94);
+    }
   }
 
   .user-profile__photo-box {
@@ -53,8 +70,19 @@
 
   .user-profile__transport-box {
     order: 1;
-    width: auto;
-    flex-grow: 1;
+    width: 308px;
+  }
+
+  .user-profile__button-box {
+    margin-top: 40px;
+  }
+
+  .user-profile__add-photo {
+    letter-spacing: 0.09em;
+  }
+
+  .user-profile__tags-box {
+    margin-top: 50px;
   }
 }
 

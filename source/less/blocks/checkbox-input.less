@@ -17,6 +17,13 @@
   color: @clr_basic_blue_light;
   font-size: 15px;
 
+  @media @tablet {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
   &::before {
     content: "";
     margin-right: 13px;
@@ -26,6 +33,11 @@
     border: 1px solid @clr_light_telegrey;
     border-radius: 4px;
     cursor: pointer;
+
+    @media @tablet {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &:hover::before {
@@ -39,6 +51,9 @@
 
 .checkbox-input__input:checked ~ .checkbox-input__label::before {
   background: white url("../../img/icons/check.svg") 50% 50% no-repeat;
+  @media @tablet {
+    background-size: 14px;
+  }
 }
 
 .checkbox-input--small {

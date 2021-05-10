@@ -9,7 +9,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &--form {
+    width: 100px;
+    height: 100px;
 
+    .lvl__text {
+      font-size: 38px;
+    }
+  }
 }
 
 .lvl__svg {}
@@ -34,10 +41,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .lvl__text {
   font-weight: bold;
   font-size: 24px;
   color: @clr_basic_blue_light;
+}
+
+.lvl__sub-text {
+  color: @clr_special_grey;
+  border-top: 1px solid fade(@clr_special_grey, 30%);
+  padding: 3px 6px;
+
 }

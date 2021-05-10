@@ -1,11 +1,18 @@
 .nav {
 
   padding: 19px 0;
-
   background-color: @clr_white;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 
   &--closed {
     background-color: transparent;
+    position: static;
+    min-height: auto;
+    width: auto;
+
     .nav__menu-box,
     .nav__user-actions-box,
     .nav__socials-box,
@@ -167,7 +174,7 @@
 
 // LOGO
 .nav__logo {
-  background: rgb(73, 190, 73);
+  background-color: rgb(73, 190, 73);
 }
 
 

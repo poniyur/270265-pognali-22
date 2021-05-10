@@ -16,8 +16,7 @@
 .plan-creator__header-steps {
   .reset-list();
   display: flex;
-  width: 20%;
-  justify-content: space-between;
+
 }
 
 .plan-creator__header-step {
@@ -37,6 +36,14 @@
   &--current::before {
     opacity: 1;
   }
+
+  &:not(:first-child) {
+    margin-left: 16px;
+    @media @tablet {
+      margin-left: 29px;
+    }
+  }
+
 }
 
 .plan-creator__form-box {
@@ -53,33 +60,63 @@
   counter-increment: plans-list-counter;
   padding: 24px 0;
   padding-bottom: 7px;
+  // display: none;
 
   &--three {
     position: relative;
+  }
+
+  &--current {
+    display: block;
   }
 }
 
 .plan-creator__step-box {
   padding-left: 24px;
   padding-right: 24px;
+  @media @tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .plan-creator__step-title {
   margin-top: 0;
   display: flex;
   flex-direction: column;
+}
 
-  &::before {
-    content: "Шаг " counters(plans-list-counter, ".") ".";
+.plan-creator__step-1-inputs {
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid @clr_athens_gray;
+    padding-top: 25px;
+  }
+}
+
+.plan-creator__companion-count {
+  @media @tablet {
+    order: 1;
   }
 }
 
 .plan-creator__duration {
   margin-top: 15px;
+
+  @media @tablet {
+    order: 3;
+  }
 }
 
 .plan-creator__with-child {
   margin-top: 20px;
+
+  @media @tablet {
+    order: 2;
+    border-bottom: 1px solid @clr_athens_gray;
+    padding-bottom: 27px;
+  }
 }
 
 .plan-creator__calendar {
@@ -105,6 +142,18 @@
 
 .plan-creator__details {
   .reset-list();
+  @media @tablet {
+    padding-top: 36px;
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: @clr_athens_gray;
+      width: calc(100% - 43px * 2);
+      height: 1px;
+      margin: auto;
+    }
+  }
 }
 
 .plan-creator__details-item {
@@ -171,6 +220,11 @@
   font-size: 18px;
   color: @clr_basic_blue_light;
   white-space: nowrap;
+
+  @media @tablet {
+    font-size: 30px;
+    font-weight: bold;
+  }
 
   &::before {
     content: "";
@@ -254,6 +308,12 @@
   flex-direction: column;
   @media @tablet {
     flex-direction: row;
+  }
+}
+
+.plan-creator__next {
+  @media @tablet {
+    max-width: 284px;
   }
 }
 

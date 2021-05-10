@@ -25,6 +25,11 @@
   border-radius: 100%;
   position: relative;
 
+  @media @tablet {
+    width: 43px;
+    height: 43px;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -36,6 +41,11 @@
     left: 0;
     opacity: .85;
     background: @clr_white;
+
+    @media @tablet {
+      width: 43px;
+      height: 43px;
+    }
   }
 
   &--active {
@@ -47,20 +57,32 @@
   &--plane {
     background-image: url("../../img/icons/plane.svg");
     background-size: 14px;
+    @media @tablet {
+      background-size: 20px;
+    }
   }
 
   &--bus {
     background-image: url("../../img/icons/bus.svg");
     background-size: 16px;
+    @media @tablet {
+      background-size: 22px;
+    }
   }
 
   &--bisycle {
     background-image: url("../../img/icons/bisycle.svg");
     background-size: 20px;
+    @media @tablet {
+      background-size: 27px;
+    }
   }
 
   &--foot {
     background-image: url("../../img/icons/run.svg");
     background-size: 16px;
+    @media @tablet {
+      background-size: 22px;
+    }
   }
 }
