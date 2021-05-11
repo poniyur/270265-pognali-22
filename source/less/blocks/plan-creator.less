@@ -11,18 +11,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media @desktop {
+    position: relative;
+    justify-content: start;
+  }
 }
 
 .plan-creator__header-steps {
   .reset-list();
   display: flex;
 
+  @media @desktop {
+    flex-direction: column;
+    position: absolute;
+    left: 932px;
+    top: 120px;
+  }
 }
 
 .plan-creator__header-step {
   display: flex;
   align-items: center;
   font-size: 0;
+  opacity: 0.3;
+
+  @media @desktop {
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: @clr_black;
+    letter-spacing: 0.11em;
+    padding: 10px 0;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -30,20 +52,28 @@
     height: 5px;
     border-radius: 100%;
     background-color: @clr_basic_blue_light;
-    opacity: 0.3;
+
+
+    @media @desktop {
+      margin-right: 36px;
+    }
   }
 
-  &--current::before {
+  &--current {
     opacity: 1;
   }
 
   &:not(:first-child) {
     margin-left: 16px;
+
     @media @tablet {
       margin-left: 29px;
     }
-  }
 
+    @media @desktop {
+      margin: 0;
+    }
+  }
 }
 
 .plan-creator__form-box {
@@ -81,9 +111,22 @@
 }
 
 .plan-creator__step-title {
-  margin-top: 0;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
+  @media @desktop {
+    flex-direction: row;
+    & > * {
+      margin-right: 10px;
+    }
+  }
+}
+
+.plan-creator__step-text {
+  @media @desktop {
+    width: 585px;
+    margin-bottom: 55px;
+  }
 }
 
 .plan-creator__step-1-inputs {
@@ -93,11 +136,20 @@
     border-top: 1px solid @clr_athens_gray;
     padding-top: 25px;
   }
+
+  @media @desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .plan-creator__companion-count {
   @media @tablet {
     order: 1;
+  }
+
+  @media @desktop {
+    width: 50%;
   }
 }
 
@@ -106,6 +158,10 @@
 
   @media @tablet {
     order: 3;
+  }
+
+  @media @desktop {
+    width: 50%;
   }
 }
 
@@ -116,6 +172,11 @@
     order: 2;
     border-bottom: 1px solid @clr_athens_gray;
     padding-bottom: 27px;
+  }
+
+  @media @desktop {
+    border: none;
+    margin-left: auto;
   }
 }
 
@@ -138,6 +199,16 @@
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: @clr_basic_blue_light;
+
+  @media @tablet {
+    text-transform: none;
+    font-size: 24px;
+    letter-spacing: 0;
+    padding-left: 25px;
+    background: url("../../img/icons/step_prev.svg") 0% 50% no-repeat;
+    width: auto;
+    margin-left: auto;
+  }
 }
 
 .plan-creator__details {
@@ -159,6 +230,14 @@
 .plan-creator__details-item {
   margin: 0 10px;
   padding-right: 16px;
+
+  @media @tablet {
+    padding-right: 0;
+
+    &:last-child .plan-creator__text-box {
+      border: none;
+    }
+  }
 }
 
 .plan-creator__details-country {
@@ -167,6 +246,10 @@
   align-items: stretch;
   position: relative;
   overflow: hidden;
+
+  @media @tablet {
+    align-items: center;
+  }
 }
 
 .plan-creator__details-item {
@@ -181,6 +264,12 @@
     left: 1px;
     transform: rotate(90deg);
     transform-origin: left center;
+
+    @media @tablet {
+      transform-origin: right center;
+      transform: rotate(-90deg);
+      left: -40px;
+    }
   }
 }
 
@@ -196,6 +285,12 @@
     left: 1px;
     transform: rotate(-90deg);
     transform-origin: left center;
+
+    @media @tablet {
+      left: -40px;
+      transform: rotate(90deg);
+      transform-origin: right center;
+    }
   }
 }
 
@@ -224,6 +319,8 @@
   @media @tablet {
     font-size: 30px;
     font-weight: bold;
+    padding: 30px 32px;
+    justify-content: space-between;
   }
 
   &::before {
@@ -235,6 +332,14 @@
     border-radius: 100%;
     background: @clr_basic_blue_light;
     margin-right: 10px;
+
+    @media @tablet {
+      order: 2;
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+      margin-right: 0px;
+    }
   }
 
   &::after {
@@ -248,12 +353,23 @@
     left: 17px;
     transform: scaleX(-1);
     transform-origin: left center;
+    @media @tablet {
+      display: none;
+    }
   }
 }
 
 
 .plan-creator__details-flag-box {
   position: relative;
+
+  @media @tablet {
+    min-width: 70px;
+    min-height: 47px;
+    position: absolute;
+    right: 100px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -264,6 +380,9 @@
     position: absolute;
     right: 16px;
     top: calc(50% - 12px);
+    @media @tablet {
+      display: none;
+    }
   }
 }
 
@@ -275,12 +394,29 @@
   right: 0;
   z-index: 1;
 
+  @media @tablet {
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    // position: static;
+  }
 }
 
 .plan-creator__text-box {
   padding-left: 14px;
   border-left: 2px solid @clr_basic_blue_light;
   padding-top: 3px;
+
+  @media @tablet {
+    padding-left: 0;
+    border-right: 2px solid @clr_basic_blue_light;
+    border-left: none;
+    padding-right: 22px;
+    margin-right: 39px;
+  }
 
 
   &:not(:last-child) {

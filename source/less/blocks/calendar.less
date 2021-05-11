@@ -57,9 +57,15 @@
   font-size: 14px;
   font-weight: normal;
   font-size: 0px;
+  width: 100%/7;
 
   @media @tablet {
     font-size: 18px;
+  }
+
+  @media @desktop {
+    text-align: left;
+    padding-left: 20px;
   }
 
   &:first-letter {
@@ -75,6 +81,7 @@
 }
 
 .calendar__cell {
+  width: 100%/7;
   text-align: center;
   font-size: 14px;
   height: 31px;
@@ -82,6 +89,27 @@
   @media @tablet {
     height: 69px;
     font-size: 18px;
+  }
+
+  @media @desktop {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    vertical-align: top;
+  }
+}
+
+.calendar__cell-month {
+  display: none;
+  @media @desktop {
+    display: inline;
+  }
+}
+
+.calendar__cell-text {
+  display: none;
+  @media @desktop {
+    display: block;
   }
 }
 

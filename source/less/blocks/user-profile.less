@@ -87,13 +87,18 @@
 }
 
 @media @desktop {
+
+  .user-profile {
+    padding-top: 0;
+    margin-top: -4px;
+  };
+
   .user-profile__level-box {
     order: 1;
     margin-left: auto;
     height: 190px;
+    width: 95px + 44px * 2;
     margin-top: -190px;
-    position: relative;
-    // z-index: 1;
   }
 
   .user-profile__photo-box {
@@ -104,8 +109,17 @@
     position: relative;
     z-index: 1;
   }
+
   .user-profile__button-box {
     order: 3;
+    margin-top: 0;
+  }
+
+  .user-profile__add-photo {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 190px;
+    padding: 13px 0;
   }
 
   .user-profile__add-photo {
@@ -119,11 +133,13 @@
 
   .user-profile__tags-box {
     order: 4;
-    width: 60%;
+    width: 732px;
+    margin-top: 27px;
   }
 
   .user-profile__transport-box {
     order: 5;
-    width: 40%;
+    width: 384px;
+    margin-top: 27px;
   }
 }

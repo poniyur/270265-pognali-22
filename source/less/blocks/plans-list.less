@@ -19,6 +19,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media @desktop {
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+  }
 }
 
 .plans-list__title {
@@ -47,11 +53,14 @@
   }
 
   @media @desktop {
-    width: auto;
     width: 50%;
+    align-items: center;
+    border: none;
+    padding: 0;
     &::before {
       order: -1;
       margin-left: 0;
+      margin-right: 36px;
     }
   }
 }
