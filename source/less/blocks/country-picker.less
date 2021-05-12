@@ -25,6 +25,11 @@
     }
   }
 
+  @media @desktop {
+    &::before {
+      left: 760px;
+    }
+  }
 }
 
 
@@ -100,6 +105,10 @@
     align-items: center;
   }
 
+  @media @desktop {
+    max-widtH: 730px;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -134,6 +143,10 @@
     max-width: 75%; // 100% - flag width
     @media @tablet {
       max-width: 369px;
+    }
+
+    @media @desktop {
+      max-width: 730px;
     }
 
     &::after {
@@ -276,6 +289,10 @@
     font-size: 20px;
     letter-spacing: 0.09em;
     background-color: @clr_special_blue_light;
+  }
+
+  @media @desktop {
+    max-width: 730px;
   }
 
   &::after {
