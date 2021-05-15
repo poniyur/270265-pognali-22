@@ -19,6 +19,12 @@
   line-height: 22px;
   letter-spacing: 0.02em;
   color: @clr_basic_blue_light;
+
+  @media @tablet {
+    width: auto;
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .catalog-form__filters {
@@ -42,7 +48,10 @@
   padding-inline-start: 0px;
   padding-inline-end: 0px;
   width: 100%;
-
+  @media @tablet {
+    position: absolute;
+    width: auto;
+  }
 }
 
 .catalog-form__group-button {
@@ -70,11 +79,25 @@
 .catalog-form__checkboxes {
   .reset-margin();
   .reset-list();
+
+  @media @tablet {
+    display: flex;
+    margin-left: 126px;
+  }
 }
 
 .catalog-form__checkbox {
+
+  @media @tablet {
+    width: 169px;
+  }
+
   &:not(:first-child) {
     margin-top: 12px;
+
+    @media @tablet {
+      margin-top: 0;
+    }
   }
 }
 

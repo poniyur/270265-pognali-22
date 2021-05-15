@@ -19,12 +19,21 @@
   display: flex;
   align-items: center;
 
+  @media @tablet {
+    width: auto;
+    order: 2;
+  }
+
   &::before {
     content: "";
     display: block;
     width: 15px;
     height: 10px;
     background: url("../../img/icons/filter.svg") 50% 50% no-repeat;
+
+    @media @tablet {
+      display: none;
+    }
   }
 }
 
@@ -34,6 +43,10 @@
   font-size: 16px;
   text-transform: uppercase;
   color: @clr_dark_blue_alt;
+
+  @media @tablet {
+    display: none;
+  }
 }
 
 .filter__toggler {
@@ -44,6 +57,17 @@
   background: url("../../img/icons/ellipsis.svg") 50% 50% no-repeat;
   background-size: contain;
   margin-left: auto;
+
+  @media @tablet {
+    font-size: 20px;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    padding-right: 40px;
+    background-size: auto;
+    background-position: 100% 50%;
+    text-transform: uppercase;
+  }
 
   &--toggled {
     background-image: url("../../img/icons/close-dark-blue.svg");
@@ -56,6 +80,17 @@
   display: none;
   .reset-list();
   padding: 0px 25px;
+
+  @media @tablet {
+    display: flex;
+    order: 1;
+  }
+}
+
+.filter__caregory-item {
+  @media @tablet {
+    margin-right: 28px;
+  }
 }
 
 .filter__change-category {
@@ -67,6 +102,10 @@
   color: @clr_dark_blue_alt;
   padding: 4px 0;
 
+  @media @tablet {
+    font-size: 20px;
+  }
+
   &--current,
   &:hover {
     opacity: 1;
@@ -77,6 +116,10 @@
 .filter__country {
   display: none;
   padding-bottom: 28px;
+
+  @media @tablet {
+    order: 3;
+  }
 }
 
 .filter__country-box {

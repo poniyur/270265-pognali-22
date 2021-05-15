@@ -33,6 +33,11 @@
   }
 }
 
+.page-title__box {
+  display: flex;
+  align-items: baseline;
+}
+
 .page-title__text {
   .reset-margin();
   display: inline-block;
@@ -52,4 +57,21 @@
     padding-bottom: 30px;
     font-size: 60px;
   }
+}
+
+.page-title__return-box {
+  display: none;
+  @media @tablet {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.page-title__return {
+  .reset-a();
+  font-size: 20px;
+  text-transform: uppercase;
+  color: @clr_white;
+  padding-right: 60px;
+  background: url("../../img/icons/arrow-bend.svg") 100% 40% no-repeat;
 }
