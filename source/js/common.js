@@ -24,18 +24,17 @@
 //burger header
 {
   const nav = document.querySelector('.nav');
-  const nav__toggler = nav.querySelector('.nav__toggler');
-  nav__toggler.addEventListener('click', event => {
+  const nav_toggler = nav.querySelector('.nav__toggler');
+  nav_toggler.addEventListener('click', event => {
     let is_open = true;
     if( nav.classList.contains('nav--closed') ) is_open = false;
 
     if( is_open ) {
       nav.classList.add('nav--closed');
-      nav__toggler.classList.remove('burger-button--cross');
+      nav_toggler.classList.remove('burger-button--cross');
     } else {
       nav.classList.remove('nav--closed');
-      nav__toggler.classList.add('burger-button--cross');
-      nav__toggler.classList.add('burger-button--cross');
+      nav_toggler.classList.add('burger-button--cross');
     }
   });
 }

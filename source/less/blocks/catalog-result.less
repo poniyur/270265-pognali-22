@@ -2,10 +2,21 @@
   background: @clr_smoky_white;
   padding-top: 15px;
   padding-bottom: 80px;
+
+  @media @desktop {
+    min-height: 814px;
+    order: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .catalog-result__list {
   .reset-list();
+
+  @media @desktop {
+    margin-top: 0;
+  }
 }
 
 .catalog-result__item {

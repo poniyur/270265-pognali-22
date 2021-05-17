@@ -3,12 +3,30 @@
   display: flex;
   justify-content: center;
 
-  &--grey {
+  &--catalog {
     justify-content: start;
+
+    @media @tablet {
+      flex-direction: column;
+    }
+
+    @media @desktop {
+      flex-direction: row;
+    }
+
     .transport-list__item {
       background-color: @clr_smoky_white;
+      @media @tablet {
+        background-color: transparent;
+        height: 30px;
+        width: 30px;
+      }
+
       &::after {
         background: @clr_smoky_white;
+        @media @tablet {
+          background-color: @clr_white;
+        }
       }
     }
   }

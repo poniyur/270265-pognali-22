@@ -17,12 +17,8 @@
 .filter__header-box {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-
-  @media @tablet {
-    width: auto;
-    order: 2;
-  }
 
   &::before {
     content: "";
@@ -59,6 +55,7 @@
   margin-left: auto;
 
   @media @tablet {
+    order: 2;
     font-size: 20px;
     font-weight: bold;
     width: auto;
@@ -73,17 +70,44 @@
     background-image: url("../../img/icons/close-dark-blue.svg");
     width: 16px;
     height: 16px;
+
+    @media @tablet {
+      width: auto;
+      height: auto;
+    }
+
+    .filter__toggler-show {
+      display: none;
+    }
+
+    .filter__toggler-hide {
+      display: inline;
+    }
   }
+}
+
+.filter__toggler-hide {
+  display: none;
 }
 
 .filter__category-list {
   display: none;
   .reset-list();
   padding: 0px 25px;
+  width: 100%;
+
 
   @media @tablet {
-    display: flex;
     order: 1;
+    width: auto;
+    display: flex;
+  }
+
+  &--show {
+    display: block;
+    @media @tablet {
+      display: flex;
+    }
   }
 }
 
@@ -124,14 +148,9 @@
 
 .filter__country-box {
   padding: 0 25px;
-}
 
-.filter--expanded {
-  .filter__category-list {
-    display: block;
-  }
-
-  .filter__country {
+  &--show {
     display: block;
   }
 }
+

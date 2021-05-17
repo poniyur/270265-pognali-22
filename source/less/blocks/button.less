@@ -13,6 +13,11 @@
   text-align: center;
   font-family: inherit;
 
+  @media @tablet {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
   &--blue-light {
     background-color: @clr_special_blue_light;
     font-weight: 500;
@@ -48,6 +53,10 @@
 
   &--small {
     padding: 10px 0;
+
+    @media @tablet {
+      padding: 13px 30px;
+    }
   }
 
   &--small-to-big {

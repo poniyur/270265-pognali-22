@@ -10,13 +10,13 @@
   const points = document.querySelectorAll('.plan-creator__header-step');
 
   let current_index = 0;
-  const max_step_index = steps.length - 1;
+  const MAX_STEP_INDEX = steps.length - 1;
 
   for( let btn of next_btns ) {
     btn.addEventListener('click', event => {
       current_index++;
-      if(current_index > max_step_index) {
-        current_index = max_step_index;
+      if(current_index > MAX_STEP_INDEX) {
+        current_index = MAX_STEP_INDEX;
       } else {
         changeStep();
       }

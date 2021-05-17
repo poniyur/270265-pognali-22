@@ -5,6 +5,14 @@
   padding-bottom: 15px;
   position: relative;
   z-index: 1;
+
+  @media @desktop {
+    width: 405px;
+    order: 2;
+    background: transparent;
+    padding-top: 0;
+    margin-top: 0;
+  }
 }
 
 .catalog-form__inner {
@@ -25,11 +33,23 @@
     font-size: 30px;
     line-height: 30px;
   }
+
+  @media @desktop {
+    width: 1px;
+  }
 }
 
 .catalog-form__filters {
   border-top: 1px solid @clr_saffron;
   margin-top: 25px;
+
+  @media @tablet {
+    padding-top: 25px;
+  }
+
+  @media @desktop {
+    padding-top: 0;
+  }
 }
 
 .catalog-form__group {
@@ -39,8 +59,30 @@
   padding: 0;
   padding-bottom: 14px;
 
+  @media @tablet {
+    position: relative;
+  }
+
+  @media @desktop {
+    position: static;
+  }
+
   &:not(:last-of-type) {
     border-bottom: 1px solid @clr_saffron;
+
+    @media @tablet {
+      border: none;
+    }
+  }
+
+  &:last-of-type {
+    @media @tablet {
+      border-bottom: 1px solid @clr_saffron;
+    }
+
+    @media @desktop {
+      border-bottom: none;
+    }
   }
 }
 
@@ -51,6 +93,12 @@
   @media @tablet {
     position: absolute;
     width: auto;
+    top: -10px;
+  }
+
+  @media @desktop {
+    position: static;
+    width: 100%;
   }
 }
 
@@ -67,12 +115,32 @@
   justify-content: space-between;
   align-items: center;
 
+  @media @tablet {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
   &::after {
     content: "";
     display: block;
     width: 10px;
     height: 6px;
     background: url("../../img/icons/accordion-toggler.svg") 50% 50% no-repeat;
+
+    @media @tablet {
+      background: none;
+      content: ":";
+      width: auto;
+      height: auto;
+      display: inline;
+    }
+
+    @media @desktop {
+      content: "";
+      background: url("../../img/icons/accordion-toggler.svg") 50% 50% no-repeat;
+      width: 10px;
+      height: 6px;
+    }
   }
 }
 
@@ -84,6 +152,11 @@
     display: flex;
     margin-left: 126px;
   }
+
+  @media @desktop {
+    display: block;
+    margin-left: 0;
+  }
 }
 
 .catalog-form__checkbox {
@@ -92,11 +165,19 @@
     width: 169px;
   }
 
+  @media @desktop {
+    width: auto;
+  }
+
   &:not(:first-child) {
     margin-top: 12px;
 
     @media @tablet {
       margin-top: 0;
+    }
+
+    @media @desktop {
+      margin-top: 12px;
     }
   }
 }
@@ -104,6 +185,16 @@
 .catalog-form__transport-list  {
   .reset-list();
   display: flex;
+
+  @media @tablet {
+    margin: 0;
+    margin-left: 126px;
+  }
+
+  @media @desktop {
+    margin: 0;
+  }
+
   .checkbox-icon {
     margin-right: 2px;
   }
@@ -111,4 +202,14 @@
 
 .catalog-form__submit {
   background: @clr_white;
+}
+
+.catalog-form__lvl {
+  @media @tablet {
+    margin-top: -7px;
+  }
+
+  @media @tablet {
+    margin-top: 0;
+  }
 }

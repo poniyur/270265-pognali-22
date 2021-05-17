@@ -1,10 +1,28 @@
 .range-input {
 
+  @media @tablet {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media @desktop {
+    display: block;
+  }
 }
 
 .range-input__box-inputs {
   display: flex;
   position: relative;
+
+  @media @tablet {
+    width: 146px;
+    order: 2;
+  }
+
+  @media @desktop {
+    width: auto;
+    order: 0;
+  }
 
   &::before {
     content: "";
@@ -29,7 +47,6 @@
     background: @clr_light_telegrey;
     border-top: 5px solid white;
     border-bottom: 5px solid white;
-
   }
 }
 
@@ -46,6 +63,13 @@
   border: 1px solid @clr_light_telegrey;
   border-radius: 4px;
   padding: 9px;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 .range-input__input-min {
@@ -60,12 +84,32 @@
   border-bottom-left-radius: 0;
 }
 
+.range-input__range {
+  @media @tablet {
+    width: 281px;
+    margin-right: 60px;
+  }
+
+  @media @desktop {
+    width: auto;
+    margin-right: 0;
+  }
+}
+
 .range-input__full-bar {
   overflow: visible;
   height: 2px;
   background-color: fade(@clr_basic_blue_light, 20%);
   position: relative;
   margin-top: 24px;
+
+  @media @tablet {
+    margin-top: 20px;
+  }
+
+  @media @desktop {
+    margin-top: 24px;
+  }
 }
 
 .range-input__bar {
